@@ -1,0 +1,10 @@
+title: <a href="/static-analysis-course" style="color:inherit;">Instroduction to Statis Analysis</a>
+description: Course taught at Faculty of Computer Science of Higher School of Economics
+theme: jekyll-theme-slate
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
