@@ -1,6 +1,6 @@
 # Welcome to Introduction to Static Analysis
 
-This site contains materials for the "Computer Architecture and Operating Systems" course taught at
+This site contains materials for the "Introduction to Static Analysis" course taught at
 [Faculty of Computer Science of Higher School of Economics](https://cs.hse.ru/en/).
 
 For information on course administration, please refer to the
