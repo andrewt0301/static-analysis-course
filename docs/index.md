@@ -1,36 +1,67 @@
-## Welcome to GitHub Pages
+# Welcome to Introduction to Static Analysis
 
-You can use the [editor on GitHub](https://github.com/andrewt0301/static-analysis-course/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This site contains materials for the "Computer Architecture and Operating Systems" course taught at
+[Faculty of Computer Science of Higher School of Economics](https://cs.hse.ru/en/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+For information on course administration, please refer to the
+__[official course page](TODO)__ at the university website.
+Also, here is the link to the __[official syllabus](TODO)__.
 
-### Markdown
+## Course Motivation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+TODO
 
-```markdown
-Syntax highlighted code block
+## Course Description
 
-# Header 1
-## Header 2
-### Header 3
+TODO
 
-- Bulleted
-- List
+## Course Topics
 
-1. Numbered
-2. List
+1. [Lecture 1](lectures/01/index.md)
 
-**Bold** and _Italic_ and `Code` text
+2. [Lecture 2](lectures/02/index.md)
 
-[Link](url) and ![Image](src)
-```
+3. [Lecture 3](lectures/03/index.md)
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+4. [Lecture 4](lectures/04/index.md)
 
-### Jekyll Themes
+5. [Lecture 5](lectures/05/index.md)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/andrewt0301/static-analysis-course/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+6. [Lecture 6](lectures/06/index.md)
+
+7. [Lecture 7](lectures/07/index.md)
+
+8. [Lecture 8](lectures/08/index.md)
+
+9. [Lecture 9](lectures/09/index.md)
+
+10. [Lecture 10](lectures/10/index.md)
+
+11. [Lecture 11](lectures/11/index.md)
+
+12. [Lecture 12](lectures/12/index.md)
+
+13. [Lecture 13](lectures/13/index.md)
+
+14. [Lecture 14](lectures/14/index.md)
+
+15. [Lecture 15](lectures/15/index.md)
+
+## Grading System
+
+Information on the grading system for the course is [here](grades.md).
+
+## Textbooks
+
+The list of textbooks recommended for reading is [here](books.md).
+
+## Related Courses
+
+The list of similar and related courses is [here](courses.md).
+
+## Links
+
+Links to other related external resources are [here](links.md).
 
 ## Feedback
 
