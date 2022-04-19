@@ -32,6 +32,10 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/andrewt0301/static-analysis-course/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+## Feedback
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+If you have any questions or suggestions related to the course content, please feel free to submit
+an [issue](https://github.com/andrewt0301/static-analysis-course/issues)
+or contact the course [author](https://github.com/andrewt0301).
+If you like the course, you are welcome to star it in
+[GitHub](https://github.com/andrewt0301/static-analysis-course).
