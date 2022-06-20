@@ -25,13 +25,13 @@ TODO
 6.  [Control-flow analysis.](lectures/06/index.md)
 7.  [Data-flow analysis.](lectures/07/index.md)
 8.  [Inter-procedural analysis.](lectures/08/index.md)
-9.  [Symbolic executing and SMT solvers.](lectures/09/index.md)
-10. [Java bytecode analysis.](lectures/10/index.md)
+9.  [Symbolic execution and SMT solvers.](lectures/09/index.md)
+10. [Lecture 10](lectures/10/index.md)
 11. [Lecture 11](lectures/11/index.md)
 12. [Lecture 12](lectures/12/index.md)
-13. [Lecture 13](lectures/13/index.md)
+13. [Case Study: Java bytecode analysis.](lectures/13/index.md)
 14. [Case Study: LLVM and Clang Static Analyzer.](lectures/14/index.md)
-15. [Lecture 15](lectures/15/index.md)
+15. [Case Study: EOLANG and Polystat.](lectures/15/index.md)
 
 ## Grading System
 
