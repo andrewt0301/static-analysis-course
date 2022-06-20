@@ -30,7 +30,7 @@ TODO
 11. [Lecture 11](lectures/11/index.md)
 12. [Lecture 12](lectures/12/index.md)
 13. [Lecture 13](lectures/13/index.md)
-14. [Lecture 14](lectures/14/index.md)
+14. [Case Study: LLVM and Clang Static Analyzer.](lectures/14/index.md)
 15. [Lecture 15](lectures/15/index.md)
 
 ## Grading System
