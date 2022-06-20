@@ -17,8 +17,8 @@ TODO
 
 ## Course Topics
 
-1.  [Gials of static program analysis.](lectures/01/index.md)
-2.  [Overview of compiler technology.](lectures/02/index.md)
+1.  [Goals of static analysis.](lectures/01/index.md)
+2.  [Overview of compilers and analyzer technologies.](lectures/02/index.md)
 3.  [Lexical analysis.](lectures/03/index.md)
 4.  [Syntax analysis.](lectures/04/index.md)
 5.  [Internal representation.](lectures/05/index.md)
