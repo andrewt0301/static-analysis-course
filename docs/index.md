@@ -9,7 +9,18 @@ Also, here is the link to the __[official syllabus](TODO)__.
 
 ## Course Motivation
 
-TODO
+Static analysis is a method that allows developers to ensure code quality without running it.
+Modern software companies use a variety of static analysis tools and even create their solutions
+to cover specific requirements. 
+The goal of the course to give students an introduction into methods of static analysis.
+The lectures give the necessary theoretical background.
+The workshops will give experience with modern static
+analysis tools and frameworks used to create them. 
+The course will be useful for those who are interested to:
+better understand programming languages and compilers;
+create own domain-specific languages;
+efficiently use static analysis tools;
+create own static analysis tools.
 
 ## Course Description
 
