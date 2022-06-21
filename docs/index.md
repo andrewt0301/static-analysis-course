@@ -13,7 +13,8 @@ TODO
 
 ## Course Description
 
-TODO
+The course is taught in __modules 1-2__.
+The course contains __15 lectures__ and __15 workshops__.
 
 ## Course Topics
 
