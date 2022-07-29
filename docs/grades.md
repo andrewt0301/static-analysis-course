@@ -23,17 +23,19 @@ https://coderoad.ru/49970549/Проблема-рендеринга-некото�
 
 # Grading System
 
+## Final Grade
+
 The final grade $$G$$ is composed of the grades
 for __2 modules__ $$M_i$$ and __exam__ $$E$$:
 
 $$G = 0.3 * (M_1 + M_2) + 0.4 * E$$
 
-_If the final grade $$G$$ is unsatisfactory, the exam can be retaken.
-In situations when it does not help because of low module grades $$M_i$$,
+_If the final grade $$G$$ is unsatisfactory, then the exam must be retaken.
+In situations, when it does not help because of low module grades $$M_i$$,
 the decision about the final grade is done by the commission of faculty members,
 who will hold the final exam._
 
-## Module Formula
+## Module Grade
 
 Each module score is calculated from Regular and Bonus points:
 
@@ -45,19 +47,9 @@ $$R_i = \frac{45}{100}\cdot H + \frac{10}{100}\cdot Q + \frac{10}{100}\cdot P + 
 
 | Variable | Score | Description |
 | $$H$$    | 45%   | Homework (practical tasks). There are deadlines. Delays cause penalties: 25% for each week of delay. 100% penalty for cheating. |
-| $$Q$$    | 10%   | Quizzes for self-checking. |
 | $$P$$    | 10%   | Class presence. You need to attend more than 3/4 of classes to earn this point. |
 | $$F$$    | 35%   | Final test (programming assignment). 100% penalty for cheating. |
 
-##### Homework Defences
-
-Homeworks are submitted in a written form.
-However, to control understanding of the material and to prevent cheating, homeworks are to be defended.
-During the defence, a student is asked questions on the topic of the homework.
-The final grade for a homework is decided at the defence.
-Defences do not have deadlines. However, it is illegal to have more than 5 undefended homeworks.
-When the number of undefended homeworks is larger than 5,
-the earliest homeworks that exceed the limit are rejected with 0 score.
 
 #### Bonus Points: 2 points
 
