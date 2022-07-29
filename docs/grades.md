@@ -23,17 +23,15 @@ https://coderoad.ru/49970549/Проблема-рендеринга-некото�
 
 # Grading System
 
-## Overall Formula
+The final grade $$G$$ is composed of the grades
+for __2 modules__ $$M_i$$ and __exam__ $$E$$:
 
-There are __2 modules__ $$M_i$$ (scored in the same way) and final __exam__ $$E$$,
-which have an equal weight.
+$$G = 0.3 * (M_1 + M_2) + 0.4 * E$$
 
-$$G = \frac{\sum_{i=1}^2M_i+E}{3}$$
-
-If the final grade $$G$$ is unsatisfactory, the exam can be retaken.
+_If the final grade $$G$$ is unsatisfactory, the exam can be retaken.
 In situations when it does not help because of low module grades $$M_i$$,
 the decision about the final grade is done by the commission of faculty members,
-who will hold the final exam.   
+who will hold the final exam._
 
 ## Module Formula
 
@@ -68,6 +66,3 @@ $$B_i = 2\cdot \frac{\sum_k A_k}{100}$$
 | Variable | Score   | Description |
 | $$A_k$$  | 5% each | Class activity. Each time you broadcast a solution of a task during class hours, you get this point. |
 
-## Exam Format
-
-The description of the exam format and exam grading rules is [here](exam.md).
