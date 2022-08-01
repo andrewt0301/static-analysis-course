@@ -44,7 +44,7 @@ $$M = min(10, 0.10 \cdot A + 0.50 \cdot H + 0.40 \cdot T + B)$$
 
 | Variable | Score | Description |
 | $$A$$    | 10%   | Attendance. You need to attend more than 75% of classes to earn this point. |
-| $$H$$    | 50%   | Homeworks. There are deadlines. Delays cause penalties: 25% for a week and 50% for large delays. |
+| $$H$$    | 50%   | Homeworks (5 during each module). There are deadlines. Delays cause penalties: 25% for a week and 50% for large delays. |
 | $$T$$    | 40%   | Test. |
 | $$B$$    | +20%  | Bonus points given at workshops. |
 
