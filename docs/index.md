@@ -1,3 +1,5 @@
+![Logo](image.png)
+
 # Welcome to Introduction to Static Analysis
 
 This site contains materials for the "Introduction to Static Analysis" course taught at
