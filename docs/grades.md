@@ -37,8 +37,8 @@ who will hold the final exam._
 
 ## Module Grade
 
-The module grade $$M$$ is calculated from _attendance_ $$A$$, _homeworks_ $$H$$, and _module test_ $$T$$.
-Also, it is possible to earn bonus points $$B$$ during workshops.
+The module grade $$M$$ is calculated from __attendance__ $$A$$, __homeworks__ $$H$$, and __test__ $$T$$.
+In addition, it is possible to earn bonus points $$B$$ during workshops.
 
 $$M = min(10, 0.10 \cdot A + 0.50 \cdot H + 0.40 \cdot T + B)$$
 
