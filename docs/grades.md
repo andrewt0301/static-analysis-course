@@ -43,9 +43,9 @@ In addition, it is possible to earn bonus points $$B$$ during workshops.
 $$M = min(10, 0.10 \cdot A + 0.50 \cdot H + 0.40 \cdot T + B)$$
 
 | Variable | Score | Description |
-| $$A$$    | 10%   | Class attendance. You need to attend more than 3/4 of classes to earn this point. |
+| $$A$$    | 10%   | Attendance. You need to attend more than 3/4 of classes to earn this point. |
 | $$H$$    | 50%   | Homeworks. There are deadlines. Delays cause penalties: 25% for a week and 50% for large delays. |
-| $$T$$    | 40%   | Module test. |
+| $$T$$    | 40%   | Test. |
 
 #### Bonus Points: 2 points
 
