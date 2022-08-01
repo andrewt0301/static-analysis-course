@@ -28,7 +28,7 @@ https://coderoad.ru/49970549/Проблема-рендеринга-некото�
 The final grade $$G$$ is composed of the grades
 for __2 modules__ $$M_i$$ and __exam__ $$E$$:
 
-$$G = 0.3 * (M_1 + M_2) + 0.4 * E$$
+$$G = 0.3 \cdot (M_1 + M_2) + 0.4 \cdot E$$
 
 _If the final grade $$G$$ is unsatisfactory, then the exam must be retaken.
 In situations, when it does not help because of low module grades $$M_i$$,
@@ -37,24 +37,19 @@ who will hold the final exam._
 
 ## Module Grade
 
-Each module score is calculated from Regular and Bonus points:
+The module grade $$M$$ is calculated from _attendance_ $$A$$, _homeworks_ $$H$$, and _module test_ $$T$$.
+Also, it is possible to earn bonus points $$B$$ during workshops.
 
-$$M_i = min(10, R_i + B_i)$$
-
-#### Regular Points: 10 points
-
-$$R_i = \frac{45}{100}\cdot H + \frac{10}{100}\cdot Q + \frac{10}{100}\cdot P + \frac{35}{100}\cdot F$$
+$$M = min(10, 0.10 \cdot A + 0.50 \cdot H + 0.40 \cdot T + B)$$
 
 | Variable | Score | Description |
-| $$H$$    | 45%   | Homework (practical tasks). There are deadlines. Delays cause penalties: 25% for each week of delay. 100% penalty for cheating. |
-| $$P$$    | 10%   | Class presence. You need to attend more than 3/4 of classes to earn this point. |
-| $$F$$    | 35%   | Final test (programming assignment). 100% penalty for cheating. |
-
+| $$A$$    | 10%   | Class attendance. You need to attend more than 3/4 of classes to earn this point. |
+| $$H$$    | 50%   | Homeworks. There are deadlines. Delays cause penalties: 25% for a week and 50% for large delays. |
+| $$T$$    | 40%   | Module test. |
 
 #### Bonus Points: 2 points
 
-$$B_i = 2\cdot \frac{\sum_k A_k}{100}$$
+$$B = 2 \cdot \frac{\sum_k W_n}{n}$$, where $$n$$ is the number of workshops.
 
-| Variable | Score   | Description |
-| $$A_k$$  | 5% each | Class activity. Each time you broadcast a solution of a task during class hours, you get this point. |
-
+| Variable | Score              | Description |
+| $$W_n$$  | 1 point each class | Workshop activity: solving tasks, presenting, discussion participation |
