@@ -6,7 +6,7 @@ Some course topics are based on other external material, which will be additiona
 ## Courses
 
 - [MOLLER] Anders Møller and Michael I. Schwartzbach.
-  [Static Program Analysis](
+  [Static Program Analysis.](
   https://cs.au.dk/~amoeller/spa/)
   Aarhus University. 2021.
 
