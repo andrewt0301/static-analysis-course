@@ -10,7 +10,6 @@ Some course topics are based on other external material, which will be additiona
   https://cs.au.dk/~amoeller/spa/)
   Aarhus University. 2021.
 
-
 ## Compiler Books
 
 - [DRAGON] Alfred Aho, Jeffrey Ullman, Ravi Sethi, and Monica Lam.
@@ -22,3 +21,8 @@ Some course topics are based on other external material, which will be additiona
   [Advanced Compiler Design and Implementation.](
   https://www.amazon.com/Advanced-Compiler-Design-Implementation-Muchnick/dp/1558603204)
   1st edition. 1997.
+
+- [PARR] Terence Parr.
+  [Language Implementation Patterns: Create Your Own Domain-Specific and General Programming Languages.](
+  https://www.amazon.com/Language-Implementation-Patterns-Domain-Specific-Programming/dp/193435645X)
+  1st Edition. 2010.
