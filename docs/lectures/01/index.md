@@ -6,7 +6,7 @@ Lecture 1
 
 Slides: [PDF](slides_01.pdf), [PPTX](slides_01.pptx)
 
-Notes:  [PDF](nodes_01.pdf)
+Notes:  [PDF](notes_01.pdf)
 
 #### Outline
 
