@@ -32,7 +32,7 @@ $$G = 0.3 \cdot (M_1 + M_2) + 0.4 \cdot E$$
 
 _If the final grade $$G$$ is unsatisfactory, then the exam must be retaken.
 In situations, when it does not help because of low module grades $$M_i$$,
-the decision about the final grade is done by the commission of faculty members,
+the decision about the final grade is made by the commission of faculty members,
 who will hold the final exam._
 
 ## Module Grade
@@ -40,11 +40,11 @@ who will hold the final exam._
 The module grade $$M$$ is calculated from __attendance__ $$A$$, __homeworks__ $$H$$, and __test__ $$T$$.
 In addition, it is possible to earn __bonus points__ $$B$$ during workshops.
 
-$$M = min(10, 0.10 \cdot A + 0.50 \cdot H + 0.40 \cdot T + B)$$
+$$M = min(10,  0.10 \cdot A + 0.50 \cdot H + 0.40 \cdot T + B)$$
 
 | Variable | Score | Description |
 | $$A$$    | 10%   | Attendance. You need to attend more than 75% of classes to earn this point. |
-| $$H$$    | 50%   | Homeworks (5 during each module). There are deadlines. Delays cause penalties: 25% for a week and 50% for large delays. |
+| $$H$$    | 50%   | Homeworks (5 during each module). There are deadlines. Delays cause penalties: 25% for a week and 50% for larger delays. |
 | $$T$$    | 40%   | Test. |
 | $$B$$    | +20%  | Bonus points given at workshops. |
 
