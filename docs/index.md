@@ -51,13 +51,9 @@ The course contains __15 lectures__ and __15 workshops__.
 
 Information on the grading system for the course is [here](grades.md).
 
-## Textbooks
+## Textbooks and Related Courses
 
-The list of textbooks recommended for reading is [here](books.md).
-
-## Related Courses
-
-The list of similar and related courses is [here](courses.md).
+The list of textbooks and related courses recommended for studying is [here](books.md).
 
 ## Links
 
