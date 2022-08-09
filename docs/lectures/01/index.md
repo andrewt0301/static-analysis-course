@@ -1,10 +1,11 @@
 Lecture 1
 ---
-# Introduction. Static analysis. Software metrics.
+# Static analysis. Software metrics.
 
 ## Lecture
 
 Slides: [PDF](slides_01.pdf), [PPTX](slides_01.pptx)
+
 Notes:  [PDF](nodes_01.pdf)
 
 #### Outline
