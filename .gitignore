@@ -1,3 +1,4 @@
 # Target folders
 .idea
+*.synctex.gz
 
