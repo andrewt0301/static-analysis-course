@@ -22,4 +22,5 @@ TODO
 
 ## References
 
-* TODO
+* Caitlin Sadowski at al. [Lessons from Building Static Analysis Tools at Google](
+  https://dl.acm.org/doi/10.1145/3188720)
