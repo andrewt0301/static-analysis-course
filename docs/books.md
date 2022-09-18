@@ -5,10 +5,17 @@ Some course topics are based on other external material, which will be additiona
 
 ## Courses
 
-- [MOLLER] Anders Møller and Michael I. Schwartzbach.
+- [SPA] Anders Møller and Michael I. Schwartzbach.
   [Static Program Analysis.](
   https://cs.au.dk/~amoeller/spa/)
   Aarhus University. 2021.
+
+- [CMUPA] Jonathan Aldrich, Claire Le Goues, and Rohan Padhye.
+  [Program Analysis.](
+  https://cmu-program-analysis.github.io/2022/index.html)
+  [Lecture notes.](
+  https://github.com/CMU-program-analysis/CMU-program-analysis.github.io/blob/master/2022/resources/program-analysis.pdf).
+  Carnegie Mellon University. 2022.
 
 ## Compiler Books
 
