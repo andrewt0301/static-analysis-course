@@ -14,7 +14,7 @@ Some course topics are based on other external material, which will be additiona
   [Program Analysis.](
   https://cmu-program-analysis.github.io/2022/index.html)
   [Lecture notes.](
-  https://github.com/CMU-program-analysis/CMU-program-analysis.github.io/blob/master/2022/resources/program-analysis.pdf).
+  https://github.com/CMU-program-analysis/CMU-program-analysis.github.io/blob/master/2022/resources/program-analysis.pdf)
   Carnegie Mellon University. 2022.
 
 ## Compiler Books
