@@ -7,7 +7,7 @@ This site contains materials for the "Introduction to Static Analysis" course ta
 
 For information on course administration, please refer to the
 __[official course page](TODO)__ at the university website.
-Also, here is the link to the __[official syllabus](TODO)__.
+Also, here is the link to the __[official syllabus](https://www.hse.ru/edu/courses/749544907)__.
 
 ## Course Motivation
 
