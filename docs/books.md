@@ -17,6 +17,11 @@ Some course topics are based on other external material, which will be additiona
   https://github.com/CMU-program-analysis/CMU-program-analysis.github.io/blob/master/2022/resources/program-analysis.pdf)
   Carnegie Mellon University. 2022.
 
+- [FAPA] Wei Le.
+  [Foundations and Applications of Program Analysis.](
+  https://github.com/wei-le/programanalysiscourse)
+  Iowa State University. 2021.
+
 ## Compiler Books
 
 - [DRAGON] Alfred Aho, Jeffrey Ullman, Ravi Sethi, and Monica Lam.
@@ -33,3 +38,13 @@ Some course topics are based on other external material, which will be additiona
   [Language Implementation Patterns: Create Your Own Domain-Specific and General Programming Languages.](
   https://www.amazon.com/Language-Implementation-Patterns-Domain-Specific-Programming/dp/193435645X)
   1st Edition. 2010.
+
+- [HANKIN] Chris Hankin, Flemming Nielson, and Hanne Riis Nielson
+  [Principles of Program Analysis.](
+  https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson/dp/3540654100)
+  1999.
+
+- [INTERP] Robert Nystrom.
+  [Crafting Interpreters.](
+  https://www.amazon.com/Crafting-Interpreters-Robert-Nystrom/dp/0990582930)
+  2021. 
