@@ -1,6 +1,6 @@
 Lecture 1
 ---
-# Static analysis. Software metrics.
+# Introduction to Static Program Analysis.
 
 ## Lecture
 
@@ -14,13 +14,15 @@ Notes:  [PDF](notes_01.pdf)
 * Information on course administration.
 * Course motivation.
 * Perspective on static program analysis.
-* Software metrics.
+* Code Inspections.
 
 ## Workshop
 
 TODO
 
 ## References
+
+* [Static Program Analysis](https://en.wikipedia.org/wiki/Static_program_analysis) (Wikipedia)
 
 * Caitlin Sadowski at al. [Lessons from Building Static Analysis Tools at Google](
   https://dl.acm.org/doi/10.1145/3188720)
