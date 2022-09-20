@@ -22,6 +22,11 @@ Some course topics are based on other external material, which will be additiona
   https://github.com/wei-le/programanalysiscourse)
   Iowa State University. 2021.
 
+- [SAMSUNG] Eugene Zouev, Dmitry Botcharnikov, and Sergey Ignatov.
+  [Compiler Construction: Practical Introduction.](
+  https://github.com/andrewt0301/CrashCourse/tree/master/Samsung%20Compiler%20BootCamp/Slides)
+  Samsung Compiler Bootcamp, Samsung Research Russia, 2019
+
 ## Compiler Books
 
 - [DRAGON] Alfred Aho, Jeffrey Ullman, Ravi Sethi, and Monica Lam.
