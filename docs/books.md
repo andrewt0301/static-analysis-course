@@ -46,10 +46,8 @@ Some course topics are based on other external material, which will be additiona
 
 - [HANKIN] Chris Hankin, Flemming Nielson, and Hanne Riis Nielson
   [Principles of Program Analysis.](
-  https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson/dp/3540654100)
-  1999.
+  https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson/dp/3540654100) 1999.
 
 - [INTERP] Robert Nystrom.
   [Crafting Interpreters.](
-  https://www.amazon.com/Crafting-Interpreters-Robert-Nystrom/dp/0990582930)
-  2021. 
+  https://www.amazon.com/Crafting-Interpreters-Robert-Nystrom/dp/0990582930) 2021. 
