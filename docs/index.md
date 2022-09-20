@@ -1,8 +1,8 @@
 ![Logo](image.png)
 
-# Welcome to Introduction to Static Analysis
+# Welcome to Principles of Static Program Analysis
 
-This site contains materials for the "Introduction to Static Analysis" course taught at
+This site contains materials for the "Principles of Static Program Analysis" course taught at
 [Faculty of Computer Science of Higher School of Economics](https://cs.hse.ru/en/).
 
 For information on course administration, please refer to the
