@@ -1,6 +1,6 @@
 Lecture 3
 ---
-# Topic 03
+# Syntax Analysis
 
 ## Lecture
 
@@ -10,9 +10,25 @@ Notes: [PDF](nodes_03.pdf)
 
 #### Outline
 
+* Context-Free Grammars
+* Parse Trees
+* Parser Generators
+
+## Workshop
+
+#### Outline
+
+#### Examples
+
+* JavaParser
+* 
+
+
 * TODO
 
 ## References
 
-* TODO
+* Open-source project [JavaParser](https://javaparser.org/)
+* Book ["JavaParser: Visited"](http://leanpub.com/javaparservisited)
+* 
 
