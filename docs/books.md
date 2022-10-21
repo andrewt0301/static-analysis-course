@@ -25,7 +25,12 @@ Some course topics are based on other external material, which will be additiona
 - [SAMSUNG] Eugene Zouev, Dmitry Botcharnikov, and Sergey Ignatov.
   [Compiler Construction: Practical Introduction.](
   https://github.com/andrewt0301/CrashCourse/tree/master/Samsung%20Compiler%20BootCamp/Slides)
-  Samsung Compiler Bootcamp, Samsung Research Russia, 2019
+  Samsung Compiler Bootcamp, Samsung Research Russia, 2019.
+
+- [NANJING] Tian Tan and Yue Li.
+  [Static Program Analysis.](
+  https://tai-e.pascal-lab.net/lectures.html) 
+  Nanjing University, 2020.
 
 ## Compiler Books
 
