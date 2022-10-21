@@ -28,9 +28,12 @@ Some course topics are based on other external material, which will be additiona
   Samsung Compiler Bootcamp, Samsung Research Russia, 2019.
 
 - [NANJING] Tian Tan and Yue Li.
-  [Static Program Analysis.](
-  https://tai-e.pascal-lab.net/lectures.html) 
+  [Static Program Analysis.](https://tai-e.pascal-lab.net/lectures.html) 
   Nanjing University, 2020.
+
+- [SOLA] Michael Pradel.
+  [Program Analysis.](https://software-lab.org/teaching/winter2021/pa/)
+  University of Stuttgart. 2021.
 
 ## Compiler Books
 
