@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jgrapht:jgrapht-core:1.4.0'
+    implementation 'org.slf4j:slf4j-api:1.5.0'
+    implementation 'fr.inria.gforge.spoon:spoon-core:10.2.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+
+
+test {
+    useJUnitPlatform()
+}
