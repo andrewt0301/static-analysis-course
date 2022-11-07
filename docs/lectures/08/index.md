@@ -16,3 +16,4 @@ Notes: [PDF](nodes_08.pdf)
 
 * [Static Single Assignment Book](https://github.com/pfalcon/ssabook)
 * [Z3 Solver Online Demonstrator](https://compsys-tools.ens-lyon.fr/z3/)
+* Dennis Yurichev. [SAT/SMT by Example](https://sat-smt.codes/)
