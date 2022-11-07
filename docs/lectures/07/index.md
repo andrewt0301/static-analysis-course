@@ -12,6 +12,13 @@ Notes: [PDF](nodes_07.pdf)
 
 * TODO
 
+## Workshop
+
+#### Example
+
+* [CFG with Spoon](
+  https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/07/examples/spoon_cfg)
+
 ## References
 
 * TODO

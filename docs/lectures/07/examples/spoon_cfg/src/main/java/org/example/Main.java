@@ -48,25 +48,7 @@ public class Main {
      * @param graph the CFG
      */
     private static void processCfg(ControlFlowGraph graph) {
-         /*
-            List<ControlFlowNode> nodes = graph.findNodesOfKind(BranchKind.BRANCH);
-            for (ControlFlowNode node : nodes) {
-                System.out.println(node.toString());
-
-               for (ControlFlowEdge in : graph.incomingEdgesOf(node)) {
-                   System.out.println("   " + in.toString());
-
-
-               }
-               for (ControlFlowEdge in : graph.outgoingEdgesOf(node)) {
-                    System.out.println("   " + in.toString());
-
-
-               }
-               */
-        //   */
-        // node.
-        // }
+        // Implement analysis here!
     }
 
     /**
