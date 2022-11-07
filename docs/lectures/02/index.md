@@ -14,5 +14,4 @@ Notes: [PDF](nodes_02.pdf)
 
 ## References
 
-* TODO
-
+* [regex101](https://regex101.com/)

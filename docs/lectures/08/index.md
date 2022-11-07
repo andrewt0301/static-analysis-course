@@ -15,3 +15,4 @@ Notes: [PDF](nodes_08.pdf)
 ## References
 
 * [Static Single Assignment Book](https://github.com/pfalcon/ssabook)
+* [Z3 Solver Online Demonstrator](https://compsys-tools.ens-lyon.fr/z3/)
