@@ -1,6 +1,6 @@
 Lecture 8
 ---
-# Topic 08
+# Data-Flow Analysis 
 
 ## Lecture
 
@@ -14,5 +14,4 @@ Notes: [PDF](nodes_08.pdf)
 
 ## References
 
-* TODO
-
+* [Static Single Assignment Book](https://github.com/pfalcon/ssabook)
