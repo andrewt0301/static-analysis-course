@@ -1,6 +1,6 @@
 Lecture 2
 ---
-# Topic 02
+# Lexical Analysis.
 
 ## Lecture
 
@@ -14,4 +14,4 @@ Notes: [PDF](nodes_02.pdf)
 
 ## References
 
-* [regex101](https://regex101.com/)
+* Online regular expression parser - [regex101](https://regex101.com/)

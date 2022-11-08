@@ -32,7 +32,7 @@ The course contains __15 lectures__ and __15 workshops__.
 ## Course Topics
 
 1.  [Introduction to static analysis.](lectures/01/index.md)
-2.  [Software metrics.](lectures/02/index.md)
+2.  [Lexical analysis.](lectures/02/index.md)
 3.  [Lexical analysis.](lectures/03/index.md)
 4.  [Syntax analysis.](lectures/04/index.md)
 5.  [Internal representation.](lectures/05/index.md)
