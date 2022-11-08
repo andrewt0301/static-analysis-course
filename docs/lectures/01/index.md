@@ -51,5 +51,11 @@ Notes:  [PDF](notes_01.pdf)
 
 * [Static Program Analysis](https://en.wikipedia.org/wiki/Static_program_analysis) (Wikipedia)
 
-* Caitlin Sadowski at al. [Lessons from Building Static Analysis Tools at Google](
+* Caitlin Sadowski et al. [Lessons from Building Static Analysis Tools at Google](
   https://dl.acm.org/doi/10.1145/3188720)
+
+* Caitlin Sadowski et al. [Tricorder: Building a Program Analysis Ecosystem](
+  https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43322.pdf)
+
+* Dino Distefano et al. [Scaling Static Analyses at Facebook](
+  https://cacm.acm.org/magazines/2019/8/238344-scaling-static-analyses-at-facebook/fulltext)
