@@ -24,5 +24,7 @@ Notes: [PDF](nodes_02.pdf)
 * Online regular expression parser - [regex101](https://regex101.com/)
 * Parser (and lexer) generator [ANTLR](https://www.antlr.org/)
 * Lexer generator [JFlex](https://www.jflex.de/)
+* The Fast Lexical Analyzer [Flex](
+  https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/)
 * IntelliJ Platform Plugin SDK: [Lexer and Parser Definition]( 
   https://plugins.jetbrains.com/docs/intellij/lexer-and-parser-definition.html)
