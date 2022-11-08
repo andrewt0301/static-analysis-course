@@ -1,6 +1,6 @@
 Lecture 3
 ---
-# Syntax Analysis
+# Syntax Analysis.
 
 ## Lecture
 
