@@ -12,6 +12,12 @@ Notes: [PDF](nodes_02.pdf)
 
 * TODO
 
+## Workshop
+
+#### Outline
+
 ## References
 
 * Online regular expression parser - [regex101](https://regex101.com/)
+* Parser (and lexer) generator [ANTLR](https://www.antlr.org/)
+* Lexer generator [JFlex](https://www.jflex.de/)
