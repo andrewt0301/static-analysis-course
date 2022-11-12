@@ -1,5 +1,5 @@
 While Language Specification
---
+---
 
 ## Syntactic Categories
 
@@ -50,7 +50,7 @@ Arithmetic expressions _a_:
 
 # Example
 
-Calculating Fibonacci number:
+While program calculating factorial is [here](fact.while):
 
 ```
 begin
