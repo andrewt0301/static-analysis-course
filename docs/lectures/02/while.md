@@ -3,7 +3,6 @@ While Language Specification
 
 ## Syntactic Categories
 
-| _Name_   | _Meaning_               |
 | _P_      | Programs                |
 | _V_      | Variable declarations   |
 | _S_      | Statements              |
@@ -17,28 +16,37 @@ While Language Specification
 
 # Abstract Syntax
 
+Programs _P_:
+* _S_
 
+Variable declarations _V_:
+* _V1_ `;` _V2_
+* `var` _x_
 
-```
-s ::= x
+Statements  _S_:
+* `begin` _V_ `;` _S_ `end`
+* _S1_ `;` _S2_
+* `skip`
+* `if` _b_ `then` _S1_ `else` _S2_
+* `while` _b_ `do` _S_
+* `write` _a_
+* `write` _b_
+* `read` _x_
 
-```
+Boolean expressions _b_:
+* `true`
+* `false`
+* `(` _b_ `)`
+* `not` _b_
+* _b1_ _opb_ _b2_
+* _a1_ _opr_ _a2_
 
-Abstract syntax
-
-
-a	::=	x | n | a1 opa a2 | a1 opbt a2
-b	::=	true | false | not b | b1 opb 2 | a1 opr a2
-S	::=	x := a | skip | S1;S2 | if b then S1 else S2 | while b do S |
-write a | write b | read x | call p(x, y)
-D	::=	proc p(val x, res y) is S end
-P	::=	S | begin D ; S end
-V	::=	var x | V;V
-S	::=	... | begin V;S end | if b then S1 else S2 fi | while b do S od
-
-# Extended Syntax
-
-
+Arithmetic expressions _a_:
+* `(` _a_ `)`
+* `-` _a_
+* _x_
+* _n_
+* _a1_ _opa_ _a2_
 
 # Example
 
@@ -46,12 +54,15 @@ Calculating Fibonacci number:
 
 ```
 begin
-var x;
-var y;
-var z;
-read x;
-y := x;
-z := 1;
-end
+  var x;
+  var y;
+  var z;
+  read x;
+  y := x;
+  z := 1;
+  while y > 1 do
+    z = z * y;
+    y = y - 1;
+  end
+  write y
 ```
-
