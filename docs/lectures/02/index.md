@@ -17,11 +17,21 @@ Notes: [PDF](nodes_02.pdf)
 
 #### Outline
 
-* TODO
+* Lexemes of While language
+* Manual implementation of a lexer
+* Lexer generator
+
+#### While Language
+
+_While_ is simple programming language described in the book
+["Principles of Program Analysis"](../../books.md).
+It will be used in the course to demonstrate implementations of various analysis techniques.
+The language specification is [here](while.md). 
 
 ## References
 
-* Online regular expression parser - [regex101](https://regex101.com/)
+* [Lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis)(Wikipedia)
+* Online regular expression parser [regex101](https://regex101.com/)
 * Parser (and lexer) generator [ANTLR](https://www.antlr.org/)
 * Lexer generator [JFlex](https://www.jflex.de/)
 * The Fast Lexical Analyzer [Flex](
