@@ -34,7 +34,8 @@ The language specification is [here](while.md).
 
 * [Hand-made While lexer](
   https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/02/examples/while_lexer)
-* ANTLR-based While lexer
+* [ANTLR-based While lexer](
+  https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/02/examples/while_lexer_antlr)
 * JFlex-based While lexer
 
 #### Tasks

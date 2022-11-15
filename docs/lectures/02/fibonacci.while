@@ -1,0 +1,10 @@
+begin
+  var a;
+  var b;
+  a := 0;
+  b := 1;
+  while b <= 10000 do
+    write b;
+    b := a + b;
+    a := b - a
+end
