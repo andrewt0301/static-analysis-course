@@ -13,6 +13,7 @@ While Language Specification
 | _opa_    | Arithmetic operators: `+`, `-`, `/`, `*`, `%` |
 | _opb_    | Boolean operators: `and`, `or`, `xor` |
 | _opr_    | Relational operators: `==`, `!=`, `<`, `>`, `<=`, `>=` |
+| _opbt_   | Bitwise operators: `<<`, `>>`, `&`, `|`, `^` |
 
 # Abstract Syntax
 
@@ -47,6 +48,7 @@ Arithmetic expressions _a_:
 * _x_
 * _n_
 * _a1_ _opa_ _a2_
+* _a1_ _opbt_ _a2_
 
 # Example
 
