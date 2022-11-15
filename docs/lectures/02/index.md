@@ -46,7 +46,7 @@ The language specification is [here](while.md).
 * [Lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis) (Wikipedia)
 * [[DRADON]](../../books.md#compiler-books) Chapter 3: Lexical Analysis
 * [[PARR]](../../books.md#compiler-books) Chapter 2: Basic Parsing Patterns
-* [[INTERP](../../books.md#compiler-books) Chapter 4: Scanning 
+* [[INTERP]](../../books.md#compiler-books) Chapter 4: Scanning 
 
 ### Tools
 * Online regular expression parser [regex101](https://regex101.com/)
