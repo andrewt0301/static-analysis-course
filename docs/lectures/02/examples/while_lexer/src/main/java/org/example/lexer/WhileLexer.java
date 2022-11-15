@@ -10,48 +10,46 @@ public class WhileLexer extends Lexer {
     @Override
     public Token nextToken() {
         for (char ch = getChar(); ch != EOF; ch = getChar()) {
+            if (isLetter(ch)) {
+                return consumeIdOrKeyword();
+            }
+            if (isNumber(ch)) {
+                return consumeNumber();
+            }
             switch (ch) {
-                case ' ':
-                case '\t':
-                case '\n':
-                case '\r':
-                    consumeWhiteSpace();
-                    break;
                 case ';' :
-                    consume();
-                    return new Token(WhileTokens.SEMI, ";", getPosition());
+                    return consumeChar(WhileToken.SEMI);
                 case ',' :
-                    consume();
-                    return new Token(WhileTokens.COMMA, ",", getPosition());
+                    return consumeChar(WhileToken.COMMA);
                 case '(' :
-                    consume();
-                    return new Token(WhileTokens.LPARENT, "(", getPosition());
+                    return consumeChar(WhileToken.LPARENT);
                 case ')' :
-                    consume();
-                    return new Token(WhileTokens.RPARENT, ")", getPosition());
+                    return consumeChar(WhileToken.RPARENT);
                 case '+':
-                    consume();
-                    return new Token(WhileTokens.PLUS, "+", getPosition());
+                    return consumeChar(WhileToken.PLUS);
                 case '-':
-                    consume();
-                    return new Token(WhileTokens.MINUS, "-", getPosition());
+                    return consumeChar(WhileToken.MINUS);
                 case '/':
-                    consume();
-                    return new Token(WhileTokens.DIV, "/", getPosition());
+                    return consumeChar(WhileToken.DIV);
                 case '*':
-                    consume();
-                    return new Token(WhileTokens.MUL, "*", getPosition());
+                    return consumeChar(WhileToken.MUL);
                 case '%':
-                    consume();
-                    return new Token(WhileTokens.REM, "%", getPosition());
-                default:
-                    if (isLetter(ch)) {
-                        return consumeId();
-                    }
-                    throw new LexerException("Invalid character: " + ch);
+                    return consumeChar(WhileToken.MOD);
+                case '|':
+                    return consumeChar(WhileToken.BOR);
+                case '^':
+                    return consumeChar(WhileToken.XOR);
+                 default:
+                    break;
+            }
+            if (isSpace(ch)) {
+                consumeWhiteSpace();
+            } else {
+                throw new LexerException(getPosition(), "Invalid character: " + ch);
             }
         }
-        return new Token(WhileTokens.EOF, getPosition());
+        Position pos = getPosition();
+        return new Token(WhileToken.EOF, new Range(pos, pos));
     }
 
     private void consumeWhiteSpace() {
@@ -60,17 +58,44 @@ public class WhileLexer extends Lexer {
         }
     }
 
-    Token consumeId() {
+    private Token consumeIdOrKeyword() {
+        Position start = getPosition();
         StringBuilder sb = new StringBuilder();
-        for (char ch = getChar(); isLetter(ch) ; ch = getChar()) {
+        for (char ch = getChar(); isLetter(ch) || isNumber(ch) ; ch = getChar()) {
             sb.append(ch);
             consume();
         }
-        return new Token(WhileTokens.ID, sb.toString(), getPosition());
+        Position end = getPosition();
+        Range range = new Range(start, end);
+        String text = sb.toString();
+        TokenType type = WhileToken.fromText(text);
+        return type == null
+                ? new Token(WhileToken.ID, text, range)
+                : new Token(type, range);
+    }
+
+    private Token consumeNumber() {
+        Position start = getPosition();
+        StringBuilder sb = new StringBuilder();
+        for (char ch = getChar(); isNumber(ch) ; ch = getChar()) {
+            sb.append(ch);
+            consume();
+        }
+        Position end = getPosition();
+        Range range = new Range(start, end);
+        String text = sb.toString();
+        return new Token(WhileToken.NUM, text, range);
+    }
+
+    private Token consumeChar(TokenType type) {
+        Position start = getPosition();
+        consume();
+        Position end = getPosition();
+        return new Token(type, new Range(start, end));
     }
 
     private static boolean isLetter(char ch) {
-        return 'a' <= ch && ch <='z' || 'A' <= ch && ch <= 'Z';
+        return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z';
     }
 
     private static boolean isNumber(char ch) {

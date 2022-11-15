@@ -7,6 +7,8 @@ WS        : [ \t\n\r] -> skip;
 COMMA     : ',';
 SEMI      : ';';
 ASSIGN    : ':=';
+LPARENT   : '(';
+RPARENT   : ')';
 
 PLUS      : '+';
 MINUS     : '-';

@@ -27,7 +27,7 @@ public class Position {
 
     @Override
     public String toString() {
-        return line + ":" + column + "(" + index + ")";
+        return index + ":" + line + ":" + column;
     }
 
     @Override

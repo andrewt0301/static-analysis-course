@@ -29,7 +29,7 @@ public abstract class Lexer {
         try {
             curChar = (char) input.read();
         } catch (IOException ex) {
-            throw new LexerException("Failed to read from stream", ex);
+            throw new LexerException(getPosition(), "Failed to read from stream", ex);
         }
         index++;
         if (curChar == '\n') {

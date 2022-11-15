@@ -3,38 +3,38 @@ package org.example.lexer;
 import java.util.Objects;
 
 public class Token {
-    private final Enum<?> type;
+    private final TokenType type;
     private final String text;
-    private final Position position;
+    private final Range range;
 
-    public Token(Enum<?> type, String text, Position position) {
-        this.type = type;
+    public Token(TokenType type, String text, Range range) {
+        this.type = Objects.requireNonNull(type);
         this.text = Objects.requireNonNull(text);
-        this.position = Objects.requireNonNull(position);
+        this.range = Objects.requireNonNull(range);
     }
 
-    public Token(Enum<?> type, Position position) {
-        this(type, '<' + type.name() + '>', position);
+    public Token(TokenType type, Range range) {
+        this(type, type.getText(), range);
     }
 
-    public Enum<?> getType() {
+    public TokenType getType() {
         return type;
     }
 
-    public boolean isType(Enum<?> type) {
-        return this.type == type;
+    public boolean isType(TokenType type) {
+        return this.type.equals(type);
     }
 
     public String getText() {
         return text;
     }
 
-    public Position getPosition() {
-        return position;
+    public Range getRange() {
+        return range;
     }
 
     @Override
     public String toString() {
-        return String.format("<'%s', %s, %s>", text, type.name(), position);
+        return String.format("<'%s', %s, %s>", text, type.getName(), range);
     }
 }
