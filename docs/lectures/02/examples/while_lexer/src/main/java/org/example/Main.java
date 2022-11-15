@@ -14,11 +14,13 @@ public class Main {
         String text = "a \n + b;";
         try (InputStream input = new ByteArrayInputStream(text.getBytes())) {
             Lexer lexer = new WhileLexer(input);
-            Token token = lexer.nextToken();
-            do {
+            for (
+                Token token = lexer.nextToken();
+                !token.isType(WhileTokens.EOF);
+                token = lexer.nextToken()
+            ) {
                 System.out.println(token);
-                token = lexer.nextToken();
-            } while (token.getType() != WhileTokens.EOF);
+            }
         }
     }
 }

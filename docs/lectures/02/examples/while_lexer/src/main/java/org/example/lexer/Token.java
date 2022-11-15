@@ -21,6 +21,10 @@ public class Token {
         return type;
     }
 
+    public boolean isType(Enum<?> type) {
+        return this.type == type;
+    }
+
     public String getText() {
         return text;
     }
