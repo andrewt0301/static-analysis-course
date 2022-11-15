@@ -10,7 +10,9 @@ Notes: [PDF](nodes_02.pdf)
 
 #### Outline
 
-* 
+* Lexical analysis
+* Lexemes and tokens
+* Regular expressions
 * Lexer generators
 
 ## Workshop
@@ -27,6 +29,17 @@ _While_ is simple programming language described in the book
 ["Principles of Program Analysis"](../../books.md).
 It will be used in the course to demonstrate implementations of various analysis techniques.
 The language specification is [here](while.md). 
+
+#### Examples
+
+* [Hand-made While lexer](
+  https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/02/examples/while_lexer)
+* ANTLR-based While lexer
+* JFlex-based While lexer
+
+#### Tasks
+
+* Compile and run the lexer examples
 
 ## References
 
