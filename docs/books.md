@@ -62,6 +62,6 @@ Some course topics are based on other external material, which will be additiona
 
 ## Tool Books
 
-- [ANTRL] Terence Parr.
+- [ANTLR] Terence Parr.
   The Definitive ANTLR 4 Reference by Terence Parr](
   https://pragprog.com/titles/tpantlr2/the-definitive-antlr-4-reference/) 2013.
