@@ -1,6 +1,6 @@
 Lecture 2
 ---
-# Lexical Analysis.
+# Lexical Analysis
 
 ## Lecture
 
@@ -52,6 +52,8 @@ The language specification is [here](while.md).
 * [[DRADON]](../../books.md#compiler-books) Chapter 3: Lexical Analysis
 * [[PARR]](../../books.md#compiler-books) Chapter 2: Basic Parsing Patterns
 * [[INTERP]](../../books.md#compiler-books) Chapter 4: Scanning 
+* [[ANTLR]](../../books.md#tool-books) Chapter 5: Designing Grammars,
+  Section 5.5 : Recognizing Common Lexical Structures
 
 ### Tools
 * Online regular expression parser [regex101](https://regex101.com/)

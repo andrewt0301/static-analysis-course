@@ -59,3 +59,9 @@ Some course topics are based on other external material, which will be additiona
 - [INTERP] Robert Nystrom.
   [Crafting Interpreters.](
   https://www.amazon.com/Crafting-Interpreters-Robert-Nystrom/dp/0990582930) 2021. 
+
+## Tool Books
+
+- [ANTRL] Terence Parr.
+  The Definitive ANTLR 4 Reference by Terence Parr](
+  https://pragprog.com/titles/tpantlr2/the-definitive-antlr-4-reference/) 2013.
