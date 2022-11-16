@@ -40,7 +40,10 @@ The language specification is [here](while.md).
 
 #### Tasks
 
-* Compile and run the lexer examples
+* Compile and run the lexer examples.
+* Extend all lexers to support hexadecimal and binary numbers.
+* Extend the hand-made lexer to support `_` in identifiers.
+* Extend all lexers to support comments: single-line (`//`) and multi-line (`/*`, `*/`).
 
 ## References
 
