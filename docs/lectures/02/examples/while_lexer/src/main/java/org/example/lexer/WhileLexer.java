@@ -10,13 +10,13 @@ public class WhileLexer extends Lexer {
     @Override
     public Token nextToken() {
         for (char ch = getChar(); ch != EOF; ch = getChar()) {
-            if (isLetter(ch)) {
-                return consumeIdOrKeyword();
-            }
-            if (isNumber(ch)) {
-                return consumeNumber();
-            }
             switch (ch) {
+                case ' ':
+                case '\t':
+                case '\n':
+                case '\r':
+                    consume();
+                    break;
                 case ';' :
                     return consumeChar(WhileToken.SEMI);
                 case ',' :
@@ -39,32 +39,37 @@ public class WhileLexer extends Lexer {
                     return consumeChar(WhileToken.BOR);
                 case '^':
                     return consumeChar(WhileToken.XOR);
-                 default:
-                    break;
-            }
-            if (isSpace(ch)) {
-                consumeWhiteSpace();
-            } else {
-                throw new LexerException(getPosition(), "Invalid character: " + ch);
+                case ':':
+                    return consumeTwoChars(WhileToken.ASSIGN);
+                case '=':
+                    return consumeTwoChars(WhileToken.EQ);
+                case '!':
+                    return consumeTwoChars(WhileToken.NEQ);
+                default:
+                    if (isLetter(ch)) {
+                        return consumeIdOrKeyword();
+                    }
+                    if (isNumber(ch)) {
+                        return consumeNumber();
+                    }
+                    throw new LexerException(
+                            getPosition(), "Invalid character: " + ch
+                       );
             }
         }
         Position pos = getPosition();
         return new Token(WhileToken.EOF, new Range(pos, pos));
     }
 
-    private void consumeWhiteSpace() {
-        for (char ch = getChar(); isSpace(ch) ; ch = getChar()) {
-            consume();
-        }
-    }
-
     private Token consumeIdOrKeyword() {
         Position start = getPosition();
         StringBuilder sb = new StringBuilder();
-        for (char ch = getChar(); isLetter(ch) || isNumber(ch) ; ch = getChar()) {
+        char ch = getChar();
+        do {
             sb.append(ch);
             consume();
-        }
+            ch = getChar();
+        } while (isLetter(ch) || isNumber(ch));
         Position end = getPosition();
         Range range = new Range(start, end);
         String text = sb.toString();
@@ -77,10 +82,12 @@ public class WhileLexer extends Lexer {
     private Token consumeNumber() {
         Position start = getPosition();
         StringBuilder sb = new StringBuilder();
-        for (char ch = getChar(); isNumber(ch) ; ch = getChar()) {
+        char ch = getChar();
+        do {
             sb.append(ch);
             consume();
-        }
+            ch = getChar();
+        } while (isNumber(ch));
         Position end = getPosition();
         Range range = new Range(start, end);
         String text = sb.toString();
@@ -90,6 +97,14 @@ public class WhileLexer extends Lexer {
     private Token consumeChar(TokenType type) {
         Position start = getPosition();
         consume();
+        Position end = getPosition();
+        return new Token(type, new Range(start, end));
+    }
+
+    private Token consumeTwoChars(TokenType type) {
+        Position start = getPosition();
+        consume();
+        match(type.getText().charAt(1));
         Position end = getPosition();
         return new Token(type, new Range(start, end));
     }

@@ -40,6 +40,15 @@ public abstract class Lexer {
         }
     }
 
+    public void match(char ch) {
+        if (curChar != ch) {
+            throw new LexerException(
+                    getPosition(), "Mismatch: expected " + ch + "; found " + curChar
+                );
+        }
+        consume();
+    }
+
     public Position getPosition() {
         return new Position(index, line, column);
     }
