@@ -35,16 +35,24 @@ public class WhileLexer extends Lexer {
                     return consumeChar(WhileToken.MUL);
                 case '%':
                     return consumeChar(WhileToken.MOD);
+                case '&':
+                    return consumeChar(WhileToken.BAND);
                 case '|':
                     return consumeChar(WhileToken.BOR);
                 case '^':
-                    return consumeChar(WhileToken.XOR);
+                    return consumeChar(WhileToken.BXOR);
                 case ':':
                     return consumeTwoChars(WhileToken.ASSIGN);
                 case '=':
                     return consumeTwoChars(WhileToken.EQ);
                 case '!':
                     return consumeTwoChars(WhileToken.NEQ);
+                case '<':
+                    return consumeTwoCharsOrDefault(
+                            WhileToken.LESS, WhileToken.LEQ, WhileToken.BSHL);
+                case '>':
+                    return consumeTwoCharsOrDefault(
+                            WhileToken.GT, WhileToken.GTE, WhileToken.BSHR);
                 default:
                     if (isLetter(ch)) {
                         return consumeIdOrKeyword();
@@ -52,13 +60,11 @@ public class WhileLexer extends Lexer {
                     if (isNumber(ch)) {
                         return consumeNumber();
                     }
-                    throw new LexerException(
-                            getPosition(), "Invalid character: " + ch
-                       );
+                    throw new LexerException(getPosition(), "Invalid character: " + ch);
             }
         }
-        Position pos = getPosition();
-        return new Token(WhileToken.EOF, new Range(pos, pos));
+        Position end = getPosition();
+        return new Token(WhileToken.EOF, new Range(end, end));
     }
 
     private Token consumeIdOrKeyword() {
@@ -109,15 +115,25 @@ public class WhileLexer extends Lexer {
         return new Token(type, new Range(start, end));
     }
 
+    private Token consumeTwoCharsOrDefault(TokenType defType, TokenType... types) {
+        Position start = getPosition();
+        consume();
+        Position end = getPosition();
+        for (TokenType type : types) {
+            String text = type.getText();
+            if (text.charAt(1) == getChar()) {
+                consume();
+                return new Token(type, new Range(start, getPosition()));
+            }
+        }
+        return new Token(defType, new Range(start, end));
+    }
+
     private static boolean isLetter(char ch) {
         return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z';
     }
 
     private static boolean isNumber(char ch) {
         return '0' <= ch && ch <='9';
-    }
-
-    private static boolean isSpace(char ch) {
-        return ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r';
     }
 }
