@@ -14,11 +14,23 @@ Notes: [PDF](nodes_13.pdf)
 
 ## Workshop
 
+#### Outline
+
+* Bytecode manipulation and analysis (Lombok, SpotBugs)
+* Bytecode manipulation tools 
+
 #### Bytecode Manipulation Tools
 
 * [ObjectWeb ASM](https://asm.ow2.io/)
 * [Javassist](https://www.javassist.org/)
 * [Apache Commons BCEL](https://commons.apache.org/proper/commons-bcel/)
+
+#### Examples
+
+* [ObjectWeb ASM example](
+  https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/13/examples/asm_example)
+* [Javassist example](
+  https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/13/examples/javasist_example)
 
 ## References
 
