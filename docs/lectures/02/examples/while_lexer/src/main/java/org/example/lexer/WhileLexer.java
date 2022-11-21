@@ -120,9 +120,7 @@ public class WhileLexer extends Lexer {
         consume();
         Position end = getPosition();
         for (TokenType type : types) {
-            String text = type.getText();
-            if (text.charAt(1) == getChar()) {
-                consume();
+            if (tryMatch(type.getText().charAt(1))) {
                 return new Token(type, new Range(start, getPosition()));
             }
         }

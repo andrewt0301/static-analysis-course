@@ -1,6 +1,6 @@
 Lecture 13
 ---
-# Topic 13
+# Java Bytecode Analysis
 
 ## Lecture
 
@@ -12,7 +12,19 @@ Notes: [PDF](nodes_13.pdf)
 
 * TODO
 
+## Workshop
+
+#### Bytecode Manipulation Tools
+
+* [ObjectWeb ASM](https://asm.ow2.io/)
+* [Javassist](https://www.javassist.org/)
+* [Apache Commons BCEL](https://commons.apache.org/proper/commons-bcel/)
+
 ## References
 
-* TODO
-
+* [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/index.html)
+* [ObjectWeb ASM](https://en.wikipedia.org/wiki/ObjectWeb_ASM) (Wikipedia)
+* [ObjectWeb ASM Web Site](https://asm.ow2.io/)
+* [View Bytecode of a Class File in Java](https://www.baeldung.com/java-class-view-bytecode) (Baeldung)
+* [A Guide to Java Bytecode Manipulation with ASM](https://www.baeldung.com/java-asm) (Baeldung)
+* [Introduction to Javassist](https://www.baeldung.com/javassist) (Baeldung)

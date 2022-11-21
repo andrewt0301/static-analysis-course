@@ -49,6 +49,14 @@ public abstract class Lexer {
         consume();
     }
 
+    public boolean tryMatch(char ch) {
+        boolean matched = curChar == ch;
+        if (matched) {
+            consume();
+        }
+        return matched;
+    }
+
     public Position getPosition() {
         return new Position(index, line, column);
     }
