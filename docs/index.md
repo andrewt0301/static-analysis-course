@@ -34,7 +34,7 @@ The course contains __15 lectures__ and __15 workshops__.
 1.  [Introduction to static analysis.](lectures/01/index.md)
 2.  [Lexical analysis.](lectures/02/index.md)
 3.  [Syntax analysis.](lectures/03/index.md)
-4.  [Syntax analysis.](lectures/04/index.md)
+4.  [Semantic analysis.](lectures/04/index.md)
 5.  [Internal representation.](lectures/05/index.md)
 6.  [Abstract syntax tree analysis.](lectures/06/index.md)
 7.  [Control-flow analysis.](lectures/07/index.md)
