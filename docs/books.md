@@ -65,3 +65,7 @@ Some course topics are based on other external material, which will be additiona
 - [ANTLR] Terence Parr.
   [The Definitive ANTLR 4 Reference by Terence Parr](
   https://pragprog.com/titles/tpantlr2/the-definitive-antlr-4-reference/) 2013.
+
+- [LLVM] Bruno Cardoso Lopes and Rafael Auler.
+  [Getting Started with LLVM Core Libraries](
+  https://www.amazon.com/Getting-Started-LLVM-Core-Libraries/dp/1782166920) 2014.
