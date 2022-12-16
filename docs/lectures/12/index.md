@@ -1,6 +1,6 @@
 Lecture 12
 ---
-# Topic 12
+# Pattern Mining and Automated Bug Fixing
 
 ## Lecture
 
