@@ -14,5 +14,4 @@ Notes: [PDF](nodes_12.pdf)
 
 ## References
 
-* TODO
-
+* [Automatic bug fixing](https://en.wikipedia.org/wiki/Automatic_bug_fixing) (Wikipedia)
