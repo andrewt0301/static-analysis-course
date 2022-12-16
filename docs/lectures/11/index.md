@@ -24,3 +24,4 @@ Notes: [PDF](nodes_11.pdf)
 ## References
 
 * [Formal Verification](https://en.wikipedia.org/wiki/Formal_verification) (Wikipedia)
+* [Java Modeling Language](https://en.wikipedia.org/wiki/Java_Modeling_Language)
