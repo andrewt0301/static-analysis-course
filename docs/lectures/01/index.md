@@ -1,6 +1,6 @@
 Lecture 1
 ---
-# Introduction to Static Program Analysis.
+# Introduction to Static Program Analysis
 
 ## Lecture
 

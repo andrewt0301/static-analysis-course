@@ -1,6 +1,6 @@
 Lecture 4
 ---
-# Topic 04
+# Semantic Analysis
 
 ## Lecture
 

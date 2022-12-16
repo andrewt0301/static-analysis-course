@@ -43,8 +43,8 @@ The course contains __15 lectures__ and __15 workshops__.
 10. [Symbolic execution and SMT solvers.](lectures/10/index.md)
 11. [Deductive verification.](lectures/11/index.md)
 12. [Mining-based analysis.](lectures/12/index.md)
-13. [Case Study: JVM and Java bytecode analysis.](lectures/13/index.md)
-14. [Case Study: LLVM and Clang Static Analyzer.](lectures/14/index.md)
+13. [JVM and Java bytecode analysis.](lectures/13/index.md)
+14. [LLVM and Clang Static Analyzer.](lectures/14/index.md)
 15. [Case Study: EOLANG and Polystat.](lectures/15/index.md)
 
 ## Grading System
