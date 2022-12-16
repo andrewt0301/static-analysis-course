@@ -1,6 +1,6 @@
 Lecture 11
 ---
-# Topic 11
+# Deductive Verification
 
 ## Lecture
 
@@ -12,7 +12,15 @@ Notes: [PDF](nodes_11.pdf)
 
 * TODO
 
+## Workshop
+
+#### Outline
+
+* Tools for deductive verification
+* [KeY](https://www.key-project.org/)
+* [Coq](https://coq.inria.fr/)
+* [Why3](https://why3.lri.fr/)
+
 ## References
 
-* TODO
-
+* [Formal Verification](https://en.wikipedia.org/wiki/Formal_verification) (Wikipedia)
