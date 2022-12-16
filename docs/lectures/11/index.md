@@ -26,3 +26,4 @@ Notes: [PDF](nodes_11.pdf)
 
 * [Formal Verification](https://en.wikipedia.org/wiki/Formal_verification) (Wikipedia)
 * [Java Modeling Language](https://en.wikipedia.org/wiki/Java_Modeling_Language)
+* [Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) (Wikipedia)
