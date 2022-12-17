@@ -26,7 +26,6 @@ Notes: [PDF](nodes_03.pdf)
 
 * [JavaParser](
   https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/03/examples/javaparser)
-
 * [JDT](
   https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/03/examples/jdt)
 
