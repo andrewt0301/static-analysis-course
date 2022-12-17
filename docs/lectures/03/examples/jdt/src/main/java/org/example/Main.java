@@ -5,12 +5,15 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.ImportDeclaration;
+import org.eclipse.jdt.core.dom.SimpleType;
 
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -52,13 +55,34 @@ public class Main {
      */
     private void process() throws IOException {
         CompilationUnit cu = parse();
+        Map<String, Integer> usages = new HashMap<>();
+        Map<String, ImportDeclaration> imports = new HashMap<>();
         cu.accept(new ASTVisitor() {
             @Override
             public boolean visit(ImportDeclaration node) {
-                System.out.println(node.getName());
+                if (!node.isOnDemand()) {
+                    String name = node.getName().getFullyQualifiedName();
+                    int pos = name.lastIndexOf('.');
+                    String id = pos == -1 ? name : name.substring(pos + 1);
+                    usages.putIfAbsent(id, 0);
+                    imports.putIfAbsent(id, node);
+                }
+                return super.visit(node);
+            }
+
+            @Override
+            public boolean visit(SimpleType node) {
+                String id = node.getName().getFullyQualifiedName();
+                usages.computeIfPresent(id, (k, v) -> v + 1);
                 return super.visit(node);
             }
         });
+        for (Map.Entry<String, Integer> usage : usages.entrySet()) {
+            if (usage.getValue() == 0) {
+                ImportDeclaration imp = imports.get(usage.getKey());
+                System.out.println("UNUSED IMPORT: " + imp);
+            }
+        }
     }
 
     private CompilationUnit parse() throws IOException {
@@ -73,7 +97,7 @@ public class Main {
         StringBuilder result = new StringBuilder();
         try (Reader reader = Files.newBufferedReader(Paths.get(fileName), StandardCharsets.UTF_8)) {
             char[] buffer = new char[1024];
-            int numRead = 0;
+            int numRead;
             while ((numRead = reader.read(buffer)) != -1) {
                 String readData = String.valueOf(buffer, 0, numRead);
                 result.append(readData);
