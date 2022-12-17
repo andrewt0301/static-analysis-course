@@ -18,9 +18,9 @@ Notes: [PDF](nodes_03.pdf)
 
 #### Outline
 
-* ANTLR
-* JavaParser
-* Eclipse JDT
+* [ANTLR](https://www.antlr.org/)
+* [JavaParser](https://javaparser.org/)
+* [Eclipse JDT](https://www.eclipse.org/jdt)
 
 #### Examples
 

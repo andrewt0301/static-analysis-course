@@ -80,7 +80,10 @@ public class Main {
         for (Map.Entry<String, Integer> usage : usages.entrySet()) {
             if (usage.getValue() == 0) {
                 ImportDeclaration imp = imports.get(usage.getKey());
-                System.out.println("UNUSED IMPORT: " + imp);
+                int pos = imp.getStartPosition();
+                int line = cu.getLineNumber(pos);
+                int column = cu.getColumnNumber(pos);
+                System.out.println("UNUSED IMPORT: " + imp + "at [" + line + ":" + column + "]");
             }
         }
     }
