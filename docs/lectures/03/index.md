@@ -24,8 +24,11 @@ Notes: [PDF](nodes_03.pdf)
 
 #### Examples
 
-* [Parsing Java with JavaParser and finding simple issues](
+* [JavaParser](
   https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/03/examples/javaparser)
+
+* [JDT](
+  https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/03/examples/jdt)
 
 ## References
 
