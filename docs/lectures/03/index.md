@@ -24,10 +24,12 @@ Notes: [PDF](nodes_03.pdf)
 
 #### Examples
 
-* [JavaParser](
+* [JavaParser-based Java parser](
   https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/03/examples/javaparser)
-* [JDT](
+* [JDT-based Java parser](
   https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/03/examples/jdt)
+* [ANTLR-based While parser](
+  https://github.com/andrewt0301/static-analysis-course/tree/main/docs/lectures/03/examples/whileantlr)
 
 ## References
 
