@@ -1,6 +1,6 @@
 Lecture 10
 ---
-# Topic 10
+# SMT Solvers
 
 ## Lecture
 
@@ -14,5 +14,4 @@ Notes: [PDF](nodes_10.pdf)
 
 ## References
 
-* TODO
-
+* Dennis Yurichev. [SAT/SMT by Example](https://sat-smt.codes/SAT_SMT_by_example.pdf)
