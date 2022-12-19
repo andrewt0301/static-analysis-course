@@ -14,4 +14,8 @@ Notes: [PDF](nodes_10.pdf)
 
 ## References
 
+* [SMT-LIB](https://smtlib.cs.uiowa.edu/)
+* [Z3 Prover](https://github.com/Z3Prover/z3)
+* [CVC4 Prover](https://cvc4.github.io/)
 * Dennis Yurichev. [SAT/SMT by Example](https://sat-smt.codes/SAT_SMT_by_example.pdf)
+* [Z3 Playground](https://jfmc.github.io/z3-play/)
