@@ -14,6 +14,7 @@ Notes: [PDF](nodes_08.pdf)
 
 ## References
 
+* [Program Analysis, Verification, and Synthesis, Fall 2018](https://www.cs.tufts.edu/comp/150AVS/)
 * [Static Single Assignment Book](https://github.com/pfalcon/ssabook)
 * [Z3 Solver Online Demonstrator](https://compsys-tools.ens-lyon.fr/z3/)
 * Dennis Yurichev. [SAT/SMT by Example](https://sat-smt.codes/)
