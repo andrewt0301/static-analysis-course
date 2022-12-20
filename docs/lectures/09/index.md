@@ -14,5 +14,4 @@ Notes: [PDF](nodes_09.pdf)
 
 ## References
 
-* TODO
-
+* [CS 252r: Advanced Topics in Programming Languages](https://groups.seas.harvard.edu/courses/cs252/2011sp/)
