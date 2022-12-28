@@ -11,16 +11,19 @@ Notes: [PDF](nodes_03.pdf)
 #### Outline
 
 * Context-Free Grammars
-* Parse Trees
+* Parse Trees and Abstract Syntax Trees
 * Parser Generators
 
 ## Workshop
 
 #### Outline
 
-* [ANTLR](https://www.antlr.org/)
-* [JavaParser](https://javaparser.org/)
-* [Eclipse JDT](https://www.eclipse.org/jdt)
+* Parser generator [ANTLR](https://www.antlr.org/)
+* Java parsers
+  - [JavaParser](https://javaparser.org/)
+  - [Eclipse JDT](https://www.eclipse.org/jdt)
+* Graph visualization with DOT
+* Simple analyzers
 
 #### Examples
 
@@ -33,6 +36,9 @@ Notes: [PDF](nodes_03.pdf)
 
 ## References
 
-* Open-source project [JavaParser](https://javaparser.org/)
 * Book ["JavaParser: Visited"](http://leanpub.com/javaparservisited)
 * [Tree-sitter parser generator](https://tree-sitter.github.io/tree-sitter/)
+* Graph description language [DOT](
+  https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) (Wikipedia)
+* DOT-based graph visualization tool [Graphviz](https://www.graphviz.org/)
+* [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline)
