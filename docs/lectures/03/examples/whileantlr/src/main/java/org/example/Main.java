@@ -29,9 +29,14 @@ public class Main {
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             WhileParser parser = new WhileParser(tokens);
             root = parser.program();
-        }
-        root.accept(new WhileBaseVisitor<Object>() {
 
+            TreeDumper dumper = new TreeDumper(parser.getRuleNames());
+            String treeText = dumper.printTree(root);
+            System.out.print(treeText);
+        }
+
+        root.accept(new WhileBaseVisitor<Object>() {
+            // TODO
         });
     }
 }
