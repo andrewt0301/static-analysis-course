@@ -18,13 +18,18 @@ package org.example.lexer;
     return new Position((int) yychar, (int) yyline, (int) yycolumn);
   }
 
+  private Range range() {
+    Position pos = pos();
+    return new Range(pos, pos.withOffset((int) yylength()));
+  }
+
   private Token token(TokenType type) {
-    Wreturn new Token(type, yytext());
+    return new Token(type, range());
   }
 %}
 
 %eofval{
-return new Token(WhileToken.EOF);
+return token(WhileToken.EOF);
 %eofval}
 
 CRLF=\R
@@ -55,6 +60,19 @@ KEY_CHARACTER=[^:=\ \n\t\f\\] | "\\ "
 <YYINITIAL> "and"    { return token(WhileToken.AND); }
 <YYINITIAL> "or"     { return token(WhileToken.OR); }
 <YYINITIAL> "xor"    { return token(WhileToken.XOR); }
+
+<YYINITIAL> "=="     { return token(WhileToken.EQ); }
+<YYINITIAL> "!="     { return token(WhileToken.NEQ); }
+<YYINITIAL> "<"      { return token(WhileToken.LESS); }
+<YYINITIAL> ">"      { return token(WhileToken.GT); }
+<YYINITIAL> "<="     { return token(WhileToken.LEQ); }
+<YYINITIAL> ">="     { return token(WhileToken.GTE); }
+
+<YYINITIAL> "<<"     { return token(WhileToken.BSHL); }
+<YYINITIAL> ">>"     { return token(WhileToken.BSHR); }
+<YYINITIAL> "&"      { return token(WhileToken.BAND); }
+<YYINITIAL> "|"      { return token(WhileToken.BOR); }
+<YYINITIAL> "^"      { return token(WhileToken.BXOR); }
 
 /* keywords */
 <YYINITIAL> "true"   { return token(WhileToken.TRUE); }

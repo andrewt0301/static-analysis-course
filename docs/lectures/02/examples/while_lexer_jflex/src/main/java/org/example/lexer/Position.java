@@ -13,6 +13,10 @@ public class Position {
         this.column = column;
     }
 
+    public Position withOffset(int offset) {
+        return new Position(index + offset, line, column + offset);
+    }
+
     public int getLine() {
         return line;
     }

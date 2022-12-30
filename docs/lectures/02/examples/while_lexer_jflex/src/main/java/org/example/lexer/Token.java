@@ -1,16 +1,20 @@
 package org.example.lexer;
 
+import java.util.Objects;
+
 public class Token {
     private final TokenType type;
     private final String text;
+    private final Range range;
 
-    public Token(TokenType type) {
-        this(type, "");
+    public Token(TokenType type, String text, Range range) {
+        this.type = Objects.requireNonNull(type);
+        this.text = Objects.requireNonNull(text);
+        this.range = Objects.requireNonNull(range);
     }
 
-    public Token(TokenType type, String text) {
-        this.type = type;
-        this.text = text;
+    public Token(TokenType type, Range range) {
+        this(type, type.getText(), range);
     }
 
     public TokenType getType() {
@@ -25,8 +29,12 @@ public class Token {
         return text;
     }
 
+    public Range getRange() {
+        return range;
+    }
+
     @Override
     public String toString() {
-        return String.format("<'%s', %s>", text, type.getName());
+        return String.format("<'%s', %s, %s>", text, type.getName(), range);
     }
 }
