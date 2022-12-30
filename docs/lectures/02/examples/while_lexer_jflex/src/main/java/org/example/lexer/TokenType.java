@@ -1,4 +1,4 @@
-package org.example;
+package org.example.lexer;
 
 public interface TokenType {
     String getName();

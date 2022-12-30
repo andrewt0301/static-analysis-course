@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.lexer.Lexer;
+import org.example.lexer.Token;
+import org.example.lexer.WhileLexer;
+import org.example.lexer.WhileToken;
+
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.lexer;
 
 %%
 
@@ -8,8 +8,20 @@ package org.example;
 %unicode
 %function nextToken
 %type Token
+
+%char
 %line
 %column
+
+%{
+  private Position pos() {
+    return new Position((int) yychar, (int) yyline, (int) yycolumn);
+  }
+
+  private Token token(TokenType type) {
+    Wreturn new Token(type, yytext());
+  }
+%}
 
 %eofval{
 return new Token(WhileToken.EOF);
@@ -27,18 +39,43 @@ KEY_CHARACTER=[^:=\ \n\t\f\\] | "\\ "
 
 %%
 
-<YYINITIAL> {END_OF_LINE_COMMENT}                           { yybegin(YYINITIAL); return new Token(null); }
+<YYINITIAL> ","      { return token(WhileToken.COMMA); }
+<YYINITIAL> ";"      { return token(WhileToken.SEMI); }
+<YYINITIAL> ":="     { return token(WhileToken.ASSIGN); }
+<YYINITIAL> "("      { return token(WhileToken.LPARENT); }
+<YYINITIAL> ")"      { return token(WhileToken.RPARENT); }
 
-<YYINITIAL> {KEY_CHARACTER}+                                { yybegin(YYINITIAL); return new Token(null); }
+<YYINITIAL> "+"      { return token(WhileToken.PLUS); }
+<YYINITIAL> "-"      { return token(WhileToken.MINUS); }
+<YYINITIAL> "/"      { return token(WhileToken.DIV); }
+<YYINITIAL> "*"      { return token(WhileToken.MUL); }
+<YYINITIAL> "%"      { return token(WhileToken.MOD); }
 
-<YYINITIAL> {SEPARATOR}                                     { yybegin(WAITING_VALUE); return new Token(null); }
+<YYINITIAL> "not"    { return token(WhileToken.NOT); }
+<YYINITIAL> "and"    { return token(WhileToken.AND); }
+<YYINITIAL> "or"     { return token(WhileToken.OR); }
+<YYINITIAL> "xor"    { return token(WhileToken.XOR); }
 
-<WAITING_VALUE> {CRLF}({CRLF}|{WHITE_SPACE})+               { yybegin(YYINITIAL); return new Token(null); }
+/* keywords */
+<YYINITIAL> "true"   { return token(WhileToken.TRUE); }
+<YYINITIAL> "false"  { return token(WhileToken.FALSE); }
+<YYINITIAL> "var"    { return token(WhileToken.VAR); }
+<YYINITIAL> "begin"  { return token(WhileToken.BEGIN); }
+<YYINITIAL> "end"    { return token(WhileToken.END); }
+<YYINITIAL> "if"     { return token(WhileToken.IF); }
+<YYINITIAL> "then"   { return token(WhileToken.THEN); }
+<YYINITIAL> "else"   { return token(WhileToken.ELSE); }
+<YYINITIAL> "while"  { return token(WhileToken.WHILE); }
+<YYINITIAL> "do"     { return token(WhileToken.DO); }
+<YYINITIAL> "write"  { return token(WhileToken.WRITE); }
+<YYINITIAL> "read"   { return token(WhileToken.READ); }
+<YYINITIAL> "skip"   { return token(WhileToken.SKIP); }
 
-<WAITING_VALUE> {WHITE_SPACE}+                              { yybegin(WAITING_VALUE); return new Token(null); }
 
-<WAITING_VALUE> {FIRST_VALUE_CHARACTER}{VALUE_CHARACTER}*   { yybegin(YYINITIAL); return new Token(null); }
+<WAITING_VALUE> {CRLF}({CRLF}|{WHITE_SPACE})+               { yybegin(YYINITIAL);  }
 
-({CRLF}|{WHITE_SPACE})+                                     { yybegin(YYINITIAL); return new Token(null); }
+<WAITING_VALUE> {WHITE_SPACE}+                              { yybegin(WAITING_VALUE);  }
 
-[^]                                                         { throw new IllegalStateException("Invalid character!"); }
+({CRLF}|{WHITE_SPACE})+                                     { yybegin(YYINITIAL);  }
+
+[^]  { throw new LexerException(pos(), "Invalid character: " + yytext()); }
