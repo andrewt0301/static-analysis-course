@@ -15,7 +15,7 @@ package org.example.lexer;
 
 %{
   private Position pos() {
-    return new Position((int) yychar, (int) yyline, (int) yycolumn);
+    return new Position((int) yychar + 1, (int) yyline + 1, (int) yycolumn + 1);
   }
 
   private Range range() {
@@ -32,68 +32,59 @@ package org.example.lexer;
 return token(WhileToken.EOF);
 %eofval}
 
-CRLF=\R
-WHITE_SPACE=[\ \n\t\f]
-FIRST_VALUE_CHARACTER=[^ \n\f\\] | "\\"{CRLF} | "\\".
-VALUE_CHARACTER=[^\n\f\\] | "\\"{CRLF} | "\\".
-END_OF_LINE_COMMENT=("#"|"!")[^\r\n]*
-SEPARATOR=[:=]
-KEY_CHARACTER=[^:=\ \n\t\f\\] | "\\ "
-
-%state WAITING_VALUE
+WS=[\ \n\r\t\f]
+NUM=[0-9]+
+ID=[a-zA-Z]+
 
 %%
 
-<YYINITIAL> ","      { return token(WhileToken.COMMA); }
-<YYINITIAL> ";"      { return token(WhileToken.SEMI); }
-<YYINITIAL> ":="     { return token(WhileToken.ASSIGN); }
-<YYINITIAL> "("      { return token(WhileToken.LPARENT); }
-<YYINITIAL> ")"      { return token(WhileToken.RPARENT); }
+{WS}+    { }
 
-<YYINITIAL> "+"      { return token(WhileToken.PLUS); }
-<YYINITIAL> "-"      { return token(WhileToken.MINUS); }
-<YYINITIAL> "/"      { return token(WhileToken.DIV); }
-<YYINITIAL> "*"      { return token(WhileToken.MUL); }
-<YYINITIAL> "%"      { return token(WhileToken.MOD); }
+","      { return token(WhileToken.COMMA); }
+";"      { return token(WhileToken.SEMI); }
+":="     { return token(WhileToken.ASSIGN); }
+"("      { return token(WhileToken.LPARENT); }
+")"      { return token(WhileToken.RPARENT); }
 
-<YYINITIAL> "not"    { return token(WhileToken.NOT); }
-<YYINITIAL> "and"    { return token(WhileToken.AND); }
-<YYINITIAL> "or"     { return token(WhileToken.OR); }
-<YYINITIAL> "xor"    { return token(WhileToken.XOR); }
+"+"      { return token(WhileToken.PLUS); }
+"-"      { return token(WhileToken.MINUS); }
+"/"      { return token(WhileToken.DIV); }
+"*"      { return token(WhileToken.MUL); }
+"%"      { return token(WhileToken.MOD); }
 
-<YYINITIAL> "=="     { return token(WhileToken.EQ); }
-<YYINITIAL> "!="     { return token(WhileToken.NEQ); }
-<YYINITIAL> "<"      { return token(WhileToken.LESS); }
-<YYINITIAL> ">"      { return token(WhileToken.GT); }
-<YYINITIAL> "<="     { return token(WhileToken.LEQ); }
-<YYINITIAL> ">="     { return token(WhileToken.GTE); }
+"not"    { return token(WhileToken.NOT); }
+"and"    { return token(WhileToken.AND); }
+"or"     { return token(WhileToken.OR); }
+"xor"    { return token(WhileToken.XOR); }
 
-<YYINITIAL> "<<"     { return token(WhileToken.BSHL); }
-<YYINITIAL> ">>"     { return token(WhileToken.BSHR); }
-<YYINITIAL> "&"      { return token(WhileToken.BAND); }
-<YYINITIAL> "|"      { return token(WhileToken.BOR); }
-<YYINITIAL> "^"      { return token(WhileToken.BXOR); }
+"=="     { return token(WhileToken.EQ); }
+"!="     { return token(WhileToken.NEQ); }
+"<"      { return token(WhileToken.LESS); }
+">"      { return token(WhileToken.GT); }
+"<="     { return token(WhileToken.LEQ); }
+">="     { return token(WhileToken.GTE); }
 
-/* keywords */
-<YYINITIAL> "true"   { return token(WhileToken.TRUE); }
-<YYINITIAL> "false"  { return token(WhileToken.FALSE); }
-<YYINITIAL> "var"    { return token(WhileToken.VAR); }
-<YYINITIAL> "begin"  { return token(WhileToken.BEGIN); }
-<YYINITIAL> "end"    { return token(WhileToken.END); }
-<YYINITIAL> "if"     { return token(WhileToken.IF); }
-<YYINITIAL> "then"   { return token(WhileToken.THEN); }
-<YYINITIAL> "else"   { return token(WhileToken.ELSE); }
-<YYINITIAL> "while"  { return token(WhileToken.WHILE); }
-<YYINITIAL> "do"     { return token(WhileToken.DO); }
-<YYINITIAL> "write"  { return token(WhileToken.WRITE); }
-<YYINITIAL> "read"   { return token(WhileToken.READ); }
-<YYINITIAL> "skip"   { return token(WhileToken.SKIP); }
+"<<"     { return token(WhileToken.BSHL); }
+">>"     { return token(WhileToken.BSHR); }
+"&"      { return token(WhileToken.BAND); }
+"|"      { return token(WhileToken.BOR); }
+"^"      { return token(WhileToken.BXOR); }
 
+"true"   { return token(WhileToken.TRUE); }
+"false"  { return token(WhileToken.FALSE); }
+"var"    { return token(WhileToken.VAR); }
+"begin"  { return token(WhileToken.BEGIN); }
+"end"    { return token(WhileToken.END); }
+"if"     { return token(WhileToken.IF); }
+"then"   { return token(WhileToken.THEN); }
+"else"   { return token(WhileToken.ELSE); }
+"while"  { return token(WhileToken.WHILE); }
+"do"     { return token(WhileToken.DO); }
+"write"  { return token(WhileToken.WRITE); }
+"read"   { return token(WhileToken.READ); }
+"skip"   { return token(WhileToken.SKIP); }
 
-<WAITING_VALUE> {CRLF}({CRLF}|{WHITE_SPACE})+               { yybegin(YYINITIAL);  }
+{ID}     { return new Token(WhileToken.ID, yytext(), range()); }
+{NUM}    { return new Token(WhileToken.NUM, yytext(), range()); }
 
-<WAITING_VALUE> {WHITE_SPACE}+                              { yybegin(WAITING_VALUE);  }
-
-({CRLF}|{WHITE_SPACE})+                                     { yybegin(YYINITIAL);  }
-
-[^]  { throw new LexerException(pos(), "Invalid character: " + yytext()); }
+[^]      { throw new LexerException(pos(), "Invalid character: " + yytext()); }
