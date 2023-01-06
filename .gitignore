@@ -1,5 +1,6 @@
 # Target folders
 .idea
 .gradle
+build
+target
 *.synctex.gz
-
