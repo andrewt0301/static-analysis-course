@@ -4,11 +4,25 @@ import com.github.javaparser.Range;
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.ImportDeclaration;
 import com.github.javaparser.ast.Node;
+import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
+import com.github.javaparser.ast.body.ConstructorDeclaration;
+import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.body.Parameter;
+import com.github.javaparser.ast.body.VariableDeclarator;
+import com.github.javaparser.ast.nodeTypes.NodeWithName;
+import com.github.javaparser.ast.nodeTypes.NodeWithSimpleName;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
+import com.github.javaparser.ast.visitor.GenericVisitor;
+import com.github.javaparser.ast.visitor.GenericVisitorAdapter;
+import com.github.javaparser.ast.visitor.ModifierVisitor;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import com.github.javaparser.printer.DotPrinter;
 import com.github.javaparser.printer.YamlPrinter;
 import com.google.common.base.Charsets;
+import org.example.symbols.Access;
+import org.example.symbols.ScopeSimple;
+import org.example.symbols.Symbol;
+import org.example.symbols.SymbolTable;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -23,6 +37,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * This class parses Java sources to build
@@ -63,11 +78,15 @@ public class Main {
      */
     private void process() throws IOException {
         Node root = StaticJavaParser.parse(new File(fileName));
+
+
+        detectUnusedImport(root);
+     //   detectVisibilityIssue(root);
+        transform(root);
         printYaml(root);
         File dotFile = new File("ast.dot");
         printDot(root, dotFile);
         createSvg(dotFile);
-        detectUnusedImport(root);
     }
 
 
@@ -163,6 +182,108 @@ public class Main {
                 System.out.println("UNUSED IMPORT: " + imp + " at " + range);
             }
         }
+    }
+
+    /**
+     * Detects unused imports in a Java AST.
+     *
+     * @param astRoot the AST root
+     */
+    private void detectVisibilityIssue(Node astRoot) {
+        SymbolTable<Node> symbols = new SymbolTable<>(new ScopeSimple<>());
+
+        astRoot.accept(new VoidVisitorAdapter<Object>() {
+            Access access;
+
+            @Override
+            public void visit(ClassOrInterfaceDeclaration n, Object arg) {
+                symbols.push(scope -> new ScopeSimple<>(scope, false));
+                super.visit(n, arg);
+                symbols.pop();
+            }
+
+            @Override
+            public void visit(ConstructorDeclaration n, Object arg) {
+                symbols.push(scope -> new ScopeSimple<>(scope, false));
+                super.visit(n, arg);
+                symbols.pop();
+            }
+
+            @Override
+            public void visit(MethodDeclaration n, Object arg) {
+                String id = n.getName().getId();
+                boolean result = symbols.define(nodeScope -> new Symbol<>(
+                        id,
+                        false,
+                        Access.LOCAL,
+                        n,
+                        nodeScope,
+                        null,
+                        null
+                ));
+                if (!result) {
+                    System.out.println("ALREADY DEFINED");
+                }
+                symbols.push(scope -> new ScopeSimple<>(scope, false));
+                super.visit(n, arg);
+                symbols.pop();
+            }
+
+            @Override
+            public void visit(VariableDeclarator n, Object arg) {
+                String id = n.getName().getId();
+                Optional<Symbol<Node>> symbol = symbols.resolve(id);
+                if (symbol.isPresent()) {
+
+                    System.out.print(n.getRange().get() + ": ");
+                    System.out.println(id + " is already declared at " +
+                            symbol.get().getNode().getRange().get());
+                }
+                symbols.define(nodeScope -> new Symbol<>(
+                        id,
+                        false,
+                        access,
+                        n,
+                        nodeScope,
+                        null,
+                        null
+                ));
+                super.visit(n, arg);
+            }
+
+            @Override
+            public void visit(Parameter n, Object arg) {
+                String id = n.getName().getId();
+                Optional<Symbol<Node>> symbol = symbols.resolve(id);
+                if (symbol.isPresent()) {
+
+                    System.out.print(n.getRange().get() + ": ");
+                    System.out.println(id + " is already declared at " +
+                            symbol.get().getNode().getRange().get());
+                }
+                symbols.define(nodeScope -> new Symbol<>(
+                        id,
+                        false,
+                        Access.LOCAL,
+                        n,
+                        nodeScope,
+                        null,
+                        null
+                ));
+                super.visit(n, arg);
+            }
+
+        }, new Object());
+
+    }
+
+    private void transform(Node astRoot) {
+
+        astRoot.accept(new ModifierVisitor<Object>() {
+
+
+
+        }, new Object());
     }
 }
 
