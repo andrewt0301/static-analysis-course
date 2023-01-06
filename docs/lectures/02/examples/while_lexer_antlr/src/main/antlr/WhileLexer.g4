@@ -1,9 +1,5 @@
 lexer grammar WhileLexer;
 
-NUM       : [0-9]+;
-ID        : [a-zA-Z][a-zA-Z0-9_]*;
-WS        : [ \t\n\r] -> skip;
-
 COMMA     : ',';
 SEMI      : ';';
 ASSIGN    : ':=';
@@ -48,3 +44,7 @@ DO        : 'do';
 WRITE     : 'write';
 READ      : 'read';
 SKIPP     : 'skip';
+
+NUM       : [0-9]+;
+ID        : [a-zA-Z][a-zA-Z0-9_]*;
+WS        : [ \t\n\r] -> skip;

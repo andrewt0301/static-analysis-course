@@ -26,8 +26,24 @@ public class Main {
                 token.getType() != Token.EOF;
                 token = lexer.nextToken()
             ) {
-                System.out.println(token);
+                printToken(lexer, token);
             }
         }
+    }
+
+    private static void printToken(Lexer lexer, Token token) {
+        String type = lexer.getRuleNames()[token.getType() - 1];
+        System.out.printf(
+            "<'%s', %s, %d:%d:%d-%d:%d:%d>%n",
+            token.getText(),
+            type,
+            token.getStartIndex() + 1,
+            token.getLine(),
+            token.getCharPositionInLine() + 1,
+            token.getStopIndex() + 2,
+            token.getLine(),
+            token.getCharPositionInLine() + (token.getStopIndex() - token.getStartIndex()) + 2
+        );
+        //<'begin', BEGIN, 1:1:1-6:1:6>
     }
 }
