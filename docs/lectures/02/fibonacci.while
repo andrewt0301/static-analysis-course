@@ -4,7 +4,9 @@ begin
   a := 0;
   b := 1;
   while b <= 10000 do
+  begin
     write b;
     b := a + b;
     a := b - a
+  end
 end

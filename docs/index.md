@@ -45,7 +45,7 @@ The course contains __15 lectures__ and __15 workshops__.
 12. [Mining-based analysis.](lectures/12/index.md)
 13. [JVM and Java bytecode analysis.](lectures/13/index.md)
 14. [LLVM and Clang Static Analyzer.](lectures/14/index.md)
-15. [Case Study: EOLANG and Polystat.](lectures/15/index.md)
+15. [Formal semantics.](lectures/15/index.md)
 
 ## Grading System
 
