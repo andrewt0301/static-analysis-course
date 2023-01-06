@@ -6,7 +6,9 @@ begin
   y := x;
   z := 1;
   while y > 1 do
+  begin
     z := z * y;
     y := y - 1
+  end
   write y
 end
