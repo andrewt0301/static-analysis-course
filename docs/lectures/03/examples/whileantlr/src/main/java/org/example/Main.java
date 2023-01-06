@@ -7,7 +7,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 
 import org.example.WhileLexer;
 import org.example.WhileParser;
-import org.example.WhileBaseVisitor;
+import org.example.WhileParserBaseVisitor;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,7 +35,7 @@ public class Main {
             System.out.print(treeText);
         }
 
-        root.accept(new WhileBaseVisitor<Object>() {
+        root.accept(new WhileParserBaseVisitor<Object>() {
             // TODO
         });
     }

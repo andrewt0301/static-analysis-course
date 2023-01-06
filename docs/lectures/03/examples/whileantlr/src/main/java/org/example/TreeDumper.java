@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.Tree;
 import org.antlr.v4.runtime.tree.Trees;
 
@@ -39,13 +38,8 @@ public class TreeDumper {
     private void recursive(Tree root, StringBuilder buffer, int offset) {
         printOffset(buffer, offset);
         buffer.append(getNodeText(root)).append(NL);
-        if (root instanceof ParserRuleContext) {
-            ParserRuleContext prc = (ParserRuleContext) root;
-            if (prc.children != null) {
-                for (Tree child : prc.children) {
-                    recursive(child, buffer, offset + 1);
-                }
-            }
+        for (int i = 0; i < root.getChildCount(); ++i) {
+            recursive(root.getChild(i), buffer, offset + 1);
         }
     }
 

@@ -1,8 +1,12 @@
-print "Fibonacci Sequence";
-a := 0;
-b := 1;
-while b <= 10000 do {
-  print b;
-  b := a + b;
-  a := b - a
-}
+begin
+  var a;
+  var b;
+  a := 0;
+  b := 1;
+  while b <= 10000 do
+  begin
+    write b;
+    b := a + b;
+    a := b - a
+  end
+end
