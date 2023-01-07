@@ -9,6 +9,7 @@ import org.example.WhileLexer;
 import org.example.WhileParser;
 import org.example.WhileParserBaseVisitor;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -33,6 +34,11 @@ public class Main {
             TreeDumper dumper = new TreeDumper(parser.getRuleNames());
             String treeText = dumper.printTree(root);
             System.out.print(treeText);
+
+            TreeVisualizer visualizer = new TreeVisualizer(parser.getRuleNames());
+            File dotFile = new File("ast.dot");
+            visualizer.printDot(root, dotFile);
+            TreeVisualizer.createSvg(dotFile);
         }
 
         root.accept(new WhileParserBaseVisitor<Object>() {
