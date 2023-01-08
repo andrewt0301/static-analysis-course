@@ -2,7 +2,7 @@ parser grammar WhileParser;
 
 options { tokenVocab=WhileLexer; }
 
-program  : stmts
+compilationUnit : stmts
          ;
 
 stmts    : stmt (SEMI stmt)*

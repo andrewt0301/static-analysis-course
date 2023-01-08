@@ -2,5 +2,6 @@
 .idea
 .gradle
 build
+gen
 target
 *.synctex.gz

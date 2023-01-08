@@ -29,7 +29,7 @@ public class Main {
             WhileLexer lexer = new WhileLexer(stream);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             WhileParser parser = new WhileParser(tokens);
-            root = parser.program();
+            root = parser.compilationUnit();
 
             TreeDumper dumper = new TreeDumper(parser.getRuleNames());
             String treeText = dumper.printTree(root);
@@ -38,7 +38,7 @@ public class Main {
             TreeVisualizer visualizer = new TreeVisualizer(parser.getRuleNames());
             File dotFile = new File("ast.dot");
             visualizer.printDot(root, dotFile);
-            TreeVisualizer.createSvg(dotFile);
+            Dot.renderSvg(dotFile);
         }
 
         root.accept(new WhileParserBaseVisitor<Object>() {
