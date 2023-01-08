@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class StmtBlock extends NodeImpl implements Stmt {
+public class StmtBlock extends AbstractNode implements Stmt {
     private final List<VarDecl> variables;
     private final List<Stmt> statements;
 

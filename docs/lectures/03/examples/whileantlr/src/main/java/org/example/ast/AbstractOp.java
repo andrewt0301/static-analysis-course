@@ -3,19 +3,19 @@ package org.example.ast;
 import java.util.Objects;
 import java.util.Optional;
 
-public class NodeOpImpl<T extends Node> extends NodeImpl  {
+public class AbstractOp<T extends Node> extends AbstractNode {
     private final Operator operator;
     private final T left;
     private final T right;
 
-    public NodeOpImpl(Range range, Operator operator, T left, T right) {
+    public AbstractOp(Range range, Operator operator, T left, T right) {
         super(range, left, right);
         this.operator = Objects.requireNonNull(operator);
         this.left = Objects.requireNonNull(left);
         this.right = Objects.requireNonNull(right);
     }
 
-    public NodeOpImpl(Range range, Operator operator, T left) {
+    public AbstractOp(Range range, Operator operator, T left) {
         super(range, left);
         this.operator = Objects.requireNonNull(operator);
         this.left = Objects.requireNonNull(left);

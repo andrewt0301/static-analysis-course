@@ -2,7 +2,7 @@ package org.example.ast;
 
 import java.util.Objects;
 
-public class StmtWrite extends NodeImpl implements Stmt {
+public class StmtWrite extends AbstractNode implements Stmt {
     private final Expr argument;
 
     public StmtWrite(Range range, Expr argument) {

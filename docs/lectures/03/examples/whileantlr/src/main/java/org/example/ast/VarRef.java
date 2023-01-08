@@ -2,7 +2,7 @@ package org.example.ast;
 
 import java.util.Objects;
 
-public class VarRef extends NodeImpl implements Expr {
+public class VarRef extends AbstractNode implements Expr {
     private final String name;
 
     public VarRef(String value, Range range) {

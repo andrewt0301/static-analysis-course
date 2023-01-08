@@ -2,7 +2,7 @@ package org.example.ast;
 
 import java.util.Objects;
 
-public class StmtAssign extends NodeImpl implements Stmt {
+public class StmtAssign extends AbstractNode implements Stmt {
     private final VarRef left;
     private final Expr right;
 

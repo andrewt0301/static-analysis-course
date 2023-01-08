@@ -2,7 +2,7 @@ package org.example.ast;
 
 import java.util.Objects;
 
-public class Value extends NodeImpl implements Expr {
+public class Value extends AbstractNode implements Expr {
     private final String value;
 
     public Value(String value, Range range) {

@@ -1,6 +1,6 @@
 package org.example.ast;
 
-public class BoolOp extends NodeOpImpl<Bool> implements Bool {
+public class BoolOp extends AbstractOp<Bool> implements Bool {
     public BoolOp(Range range, Operator operator, Bool left, Bool right) {
         super(range, operator, left, right);
     }

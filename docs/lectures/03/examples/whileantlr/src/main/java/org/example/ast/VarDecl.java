@@ -2,7 +2,7 @@ package org.example.ast;
 
 import java.util.Objects;
 
-public class VarDecl extends NodeImpl {
+public class VarDecl extends AbstractNode {
     private final String name;
 
     public VarDecl(String value, Range range) {

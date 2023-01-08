@@ -1,6 +1,6 @@
 package org.example.ast;
 
-public class ExprRead extends NodeImpl implements Expr {
+public class ExprRead extends AbstractNode implements Expr {
     public ExprRead(Range range) {
         super(range);
     }

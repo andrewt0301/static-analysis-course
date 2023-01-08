@@ -2,7 +2,7 @@ package org.example.ast;
 
 import java.util.Objects;
 
-public class StmtWhile extends NodeImpl implements Stmt {
+public class StmtWhile extends AbstractNode implements Stmt {
     private final Bool condition;
     private final Stmt statement;
 

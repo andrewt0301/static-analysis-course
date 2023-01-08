@@ -3,7 +3,7 @@ package org.example.ast;
 import java.util.Objects;
 import java.util.Optional;
 
-public class StmtIf extends NodeImpl implements Stmt {
+public class StmtIf extends AbstractNode implements Stmt {
     private final Bool condition;
     private final Stmt ifStatement;
     private final Stmt elseStatement;

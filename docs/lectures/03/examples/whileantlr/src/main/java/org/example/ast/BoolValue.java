@@ -1,6 +1,6 @@
 package org.example.ast;
 
-public class BoolValue extends NodeImpl implements Bool {
+public class BoolValue extends AbstractNode implements Bool {
     private final boolean value;
 
     public BoolValue(Range range, boolean value) {
