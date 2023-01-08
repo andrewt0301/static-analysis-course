@@ -45,4 +45,8 @@ public enum Operator {
     public static Operator fromText(String text) {
         return OP_BY_TEXT.get(text);
     }
+
+    public String getText() {
+        return text;
+    }
 }

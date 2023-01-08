@@ -9,9 +9,10 @@ public abstract class NodeImpl implements Node {
     private final Range range;
     private final List<Node> children;
 
-    public NodeImpl(Range range, List<Node> children) {
+    @SuppressWarnings("unchecked")
+    public NodeImpl(Range range, List<? extends Node> children) {
         this.range = Objects.requireNonNull(range);
-        this.children = Objects.requireNonNull(children);
+        this.children = (List<Node>) Objects.requireNonNull(children);
     }
 
     public NodeImpl(Range range) {
