@@ -2,10 +2,10 @@ package org.example;
 
 import org.example.ast.Node;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * Renders ASTs into DOT files.
@@ -18,8 +18,8 @@ public class AstVisualizer {
      * @param dotFile the DOT file
      * @throws IOException if fails to write to the file
      */
-    public void printDot(Node root, File dotFile) throws IOException {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(dotFile))) {
+    public void printDot(Node root, Path dotFile) throws IOException {
+        try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(dotFile))) {
             writer.println("digraph AST {");
             writer.println("  node [shape=box style=rounded];");
             writeTree(writer, root, 0, -1);

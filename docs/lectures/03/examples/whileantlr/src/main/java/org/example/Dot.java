@@ -1,13 +1,12 @@
 package org.example;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 
 public class Dot {
     /**
@@ -15,11 +14,11 @@ public class Dot {
      *
      * @param dotFile the DOT file
      */
-    public static void renderSvg(File dotFile) throws IOException {
-        String path = dotFile.getPath();
-        ProcessBuilder svgBuilder = new ProcessBuilder("dot", "-Tsvg", path);
+    public static void renderSvg(Path dotFile) throws IOException {
+        ProcessBuilder svgBuilder = new ProcessBuilder("dot", "-Tsvg", dotFile.toString());
         Process process = svgBuilder.start();
-        try (OutputStream output = Files.newOutputStream(Paths.get(path + ".svg"))) {
+        Path svgFile = dotFile.resolveSibling(dotFile.getFileName() + ".svg");
+        try (OutputStream output = Files.newOutputStream(svgFile)) {
             copy(process.getInputStream(), output);
             int exitCode = process.waitFor();
             if (exitCode != 0) {

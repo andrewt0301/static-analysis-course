@@ -3,10 +3,10 @@ package org.example;
 import org.antlr.v4.runtime.tree.Tree;
 import org.antlr.v4.runtime.tree.Trees;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -33,8 +33,8 @@ public class TreeVisualizer {
      * @param dotFile the DOT file
      * @throws IOException if fails to write to the file
      */
-    public void printDot(Tree root, File dotFile) throws IOException {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(dotFile))) {
+    public void printDot(Tree root, Path dotFile) throws IOException {
+        try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(dotFile))) {
             writer.println("digraph AST {");
             writer.println("  node [shape=box style=rounded];");
             writeTree(writer, root, 0, -1);

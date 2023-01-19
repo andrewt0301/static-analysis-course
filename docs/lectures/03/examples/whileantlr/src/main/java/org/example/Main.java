@@ -9,7 +9,6 @@ import org.example.WhileLexer;
 import org.example.WhileParser;
 import org.example.WhileParserBaseVisitor;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -36,7 +35,7 @@ public class Main {
             System.out.print(treeText);
 
             TreeVisualizer visualizer = new TreeVisualizer(parser.getRuleNames());
-            File dotFile = new File("ast.dot");
+            Path dotFile = Paths.get("ast.dot");
             visualizer.printDot(root, dotFile);
             Dot.renderSvg(dotFile);
         }
