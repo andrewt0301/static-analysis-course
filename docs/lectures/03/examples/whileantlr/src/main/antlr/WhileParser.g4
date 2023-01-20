@@ -8,7 +8,8 @@ compilationUnit : stmts
 stmts    : stmt (SEMI stmt)*
          ;
 
-stmt     : blockStmt
+stmt     : varDecl
+         | blockStmt
          | assignStmt
          | skipStmt
          | writeStmt
@@ -16,10 +17,10 @@ stmt     : blockStmt
          | whileStmt
          ;
 
-var      : VAR ID SEMI
+varDecl  : VAR ID (ASSIGN expr)?
          ;
 
-blockStmt: BEGIN var* stmts END
+blockStmt: BEGIN stmts END
          ;
 
 assignStmt: ID ASSIGN expr
