@@ -2,14 +2,10 @@ parser grammar WhileParser;
 
 options { tokenVocab=WhileLexer; }
 
-compilationUnit : stmts
+compilationUnit : blockStmt
          ;
 
-stmts    : stmt (SEMI stmt)*
-         ;
-
-stmt     : varDecl
-         | blockStmt
+stmt     : blockStmt
          | assignStmt
          | skipStmt
          | writeStmt
@@ -20,7 +16,7 @@ stmt     : varDecl
 varDecl  : VAR ID (ASSIGN expr)?
          ;
 
-blockStmt: BEGIN stmts END
+blockStmt: BEGIN ((varDecl | stmt) SEMI)* END
          ;
 
 assignStmt: ID ASSIGN expr

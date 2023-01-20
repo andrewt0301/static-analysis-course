@@ -7,6 +7,6 @@ begin
   begin
     write b;
     b := a + b;
-    a := b - a
-  end
+    a := b - a;
+  end;
 end
