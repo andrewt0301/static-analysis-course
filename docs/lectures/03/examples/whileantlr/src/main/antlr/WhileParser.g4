@@ -42,15 +42,15 @@ expr     : NUM
          | READ
          | MINUS expr
          | BNOT expr
-         | expr (PLUS|MINUS) expr
-         | expr (BSHL|BSHR|BAND|BOR|BXOR) expr
-         | expr (DIV|MUL|MOD) expr
+         | expr bop=(DIV|MUL|MOD) expr
+         | expr bop=(BSHL|BSHR|BAND|BOR|BXOR) expr
+         | expr bop=(PLUS|MINUS) expr
          | LPARENT expr RPARENT
          ;
 
-bool     : (TRUE|FALSE)
+bool     : val=(TRUE|FALSE)
          | NOT bool
-         | bool (AND|OR|XOR) bool
-         | expr (EQ|NEQ|LESS|GT|LEQ|GTE) expr
+         | expr bop=(EQ|NEQ|LESS|GT|LEQ|GTE) expr
+         | bool bop=(AND|OR|XOR) bool
          | LPARENT bool RPARENT
          ;
