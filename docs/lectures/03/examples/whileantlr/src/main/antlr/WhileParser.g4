@@ -16,10 +16,13 @@ stmt     : blockStmt
 varDecl  : VAR ID (ASSIGN expr)?
          ;
 
-blockStmt: BEGIN ((varDecl | stmt) SEMI)* END
+varOrStmt: varDecl | stmt
          ;
 
-assignStmt: ID ASSIGN expr
+blockStmt: BEGIN (varOrStmt SEMI)* END
+         ;
+
+assignStmt: varRef ASSIGN expr
          ;
 
 whileStmt: WHILE bool DO stmt
@@ -35,14 +38,17 @@ writeStmt: WRITE expr
          ;
 
 expr     : NUM
-         | ID
+         | varRef
          | READ
-         | MINUS expr
-         | BNOT expr
+         | uop=MINUS expr
+         | uop=BNOT expr
          | expr bop=(DIV|MUL|MOD) expr
          | expr bop=(BSHL|BSHR|BAND|BOR|BXOR) expr
          | expr bop=(PLUS|MINUS) expr
          | LPARENT expr RPARENT
+         ;
+
+varRef   : ID
          ;
 
 bool     : val=(TRUE|FALSE)

@@ -7,13 +7,13 @@ public class VarDecl extends AbstractNode implements Stmt {
     private final String name;
     private final Expr expr;
 
-    public VarDecl(String name, Range range) {
+    public VarDecl(Range range, String name) {
         super(range);
         this.name = Objects.requireNonNull(name);
         this.expr = null;
     }
 
-    public VarDecl(String name, Expr expr, Range range) {
+    public VarDecl(Range range, String name, Expr expr) {
         super(range, expr);
         this.name = Objects.requireNonNull(name);
         this.expr = Objects.requireNonNull(expr);

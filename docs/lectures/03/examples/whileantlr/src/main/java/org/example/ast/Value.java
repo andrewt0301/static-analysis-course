@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Value extends AbstractNode implements Expr {
     private final String value;
 
-    public Value(String value, Range range) {
+    public Value(Range range, String value) {
         super(range);
         this.value = Objects.requireNonNull(value);
     }

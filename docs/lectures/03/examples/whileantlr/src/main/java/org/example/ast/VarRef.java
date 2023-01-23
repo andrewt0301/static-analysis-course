@@ -5,9 +5,9 @@ import java.util.Objects;
 public class VarRef extends AbstractNode implements Expr {
     private final String name;
 
-    public VarRef(String value, Range range) {
+    public VarRef(Range range, String name) {
         super(range);
-        this.name = Objects.requireNonNull(value);
+        this.name = Objects.requireNonNull(name);
     }
 
     public String getName() {

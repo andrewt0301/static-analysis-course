@@ -10,6 +10,9 @@ public class AstDumper {
     private static final String NL = System.lineSeparator();
 
     public String printTree(Node root) {
+        if (root == null) {
+            return "null";
+        }
         StringBuilder buffer = new StringBuilder();
         printTree(buffer, root);
         return buffer.toString();

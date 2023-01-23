@@ -5,9 +5,8 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-import org.example.WhileLexer;
-import org.example.WhileParser;
-import org.example.WhileParserBaseVisitor;
+import org.example.ast.AstBuilder;
+import org.example.ast.Node;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,8 +39,13 @@ public class Main {
             Dot.renderSvg(dotFile);
         }
 
-        root.accept(new WhileParserBaseVisitor<Object>() {
-            // TODO
-        });
+        Node astRoot = root.accept(new AstBuilder());
+        System.out.println("------------------------");
+        System.out.println(new AstDumper().printTree(astRoot));
+
+        AstVisualizer visualizer = new AstVisualizer();
+        Path dotFile = Paths.get("ast2.dot");
+        visualizer.printDot(astRoot, dotFile);
+        Dot.renderSvg(dotFile);
     }
 }
