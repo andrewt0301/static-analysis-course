@@ -2,6 +2,7 @@ package org.example.ast;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.Token;
+import org.example.WhileParser;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -57,7 +58,7 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
     @Override
     public Node visitIfStmt(org.example.WhileParser.IfStmtContext ctx) {
         Range range = newRange(ctx);
-        Bool cond = (Bool) visitBool(ctx.bool());
+        Expr cond = (Expr) visitBool(ctx.bool());
         Stmt ifBlock = (Stmt) visitStmt(ctx.stmt(0));
         return ctx.ELSE() == null
             ? new StmtIf(range, cond, ifBlock)
@@ -67,7 +68,7 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
     @Override
     public Node visitWhileStmt(org.example.WhileParser.WhileStmtContext ctx) {
         Range range = newRange(ctx);
-        return new StmtWhile(range, (Bool) visitBool(ctx.bool()), (Stmt) visitStmt(ctx.stmt()));
+        return new StmtWhile(range, (Expr) visitBool(ctx.bool()), (Stmt) visitStmt(ctx.stmt()));
     }
 
     @Override
@@ -77,13 +78,9 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
 
     @Override
     public Node visitExpr(org.example.WhileParser.ExprContext ctx) {
-        if (ctx.varRef() != null) {
-            return visitVarRef(ctx.varRef());
-        }
-        Range range = newRange(ctx);
         if (ctx.bop != null) {
             return new ExprOp(
-                    range,
+                    newRange(ctx),
                     Operator.fromText(ctx.bop.getText()),
                     (Expr) visitExpr(ctx.expr(0)),
                     (Expr) visitExpr(ctx.expr(1))
@@ -91,24 +88,61 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
         }
         if (ctx.uop != null) {
             return new ExprOp(
-                    range,
+                    newRange(ctx),
                     Operator.fromText(ctx.uop.getText()),
                     (Expr) visitExpr(ctx.expr(0))
                 );
         }
-        return new Value(range, "0");
+        return super.visitExpr(ctx);
+    }
+
+    @Override
+    public Node visitAtom(org.example.WhileParser.AtomContext ctx) {
+        if (ctx.NUM() != null) {
+            return new Value(newRange(ctx), ctx.NUM().getText());
+        }
+        if (ctx.READ() != null) {
+            return new ExprRead(newRange(ctx));
+        }
+        if (ctx.expr() != null) {
+            return visitExpr(ctx.expr());
+        }
+        return super.visitAtom(ctx);
     }
 
     @Override
     public Node visitBool(org.example.WhileParser.BoolContext ctx) {
-        return new BoolValue(newRange(ctx), false);
+        if (ctx.NOT() != null) {
+            return new ExprOp(
+                    newRange(ctx),
+                    Operator.NOT,
+                    (Expr) visitBool(ctx.bool(0))
+                );
+        }
+        if (ctx.bop != null) {
+            return new ExprOp(
+                    newRange(ctx),
+                    Operator.fromText(ctx.bop.getText()),
+                    (Expr) visitExpr(ctx.expr(0)),
+                    (Expr) visitExpr(ctx.expr(1))
+                );
+        }
+        return super.visitBool(ctx);
+    }
+
+    @Override
+    public Node visitBoolAtom(WhileParser.BoolAtomContext ctx) {
+        if (ctx.val != null) {
+            return new BoolValue(newRange(ctx), Boolean.parseBoolean(ctx.val.getText()));
+        }
+        return super.visitBool(ctx.bool());
     }
 
     private static Range newRange(ParserRuleContext ctx) {
         return new Range(
                 newStartPosition(ctx.start),
                 newEndPosition(ctx.stop)
-        );
+            );
     }
 
     private static Position newStartPosition(Token token) {
@@ -116,7 +150,7 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
                 token.getStartIndex(),
                 token.getLine(),
                 token.getCharPositionInLine()
-        );
+            );
     }
 
     private static Position newEndPosition(Token token) {
@@ -124,6 +158,6 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
         return new Position(
                 token.getStartIndex(), token.getLine(),
                 token.getCharPositionInLine() + length
-        );
+            );
     }
 }

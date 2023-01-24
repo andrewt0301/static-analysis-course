@@ -4,13 +4,13 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class StmtIf extends AbstractNode implements Stmt {
-    private final Bool condition;
+    private final Expr condition;
     private final Stmt ifStatement;
     private final Stmt elseStatement;
 
     public StmtIf(
             Range range,
-            Bool condition,
+            Expr condition,
             Stmt ifStatement,
             Stmt elseStatement) {
         super(range, condition, ifStatement, elseStatement);
@@ -21,7 +21,7 @@ public class StmtIf extends AbstractNode implements Stmt {
 
     public StmtIf(
             Range range,
-            Bool condition,
+            Expr condition,
             Stmt ifStatement) {
         super(range, condition, ifStatement);
         this.condition = Objects.requireNonNull(condition);
@@ -29,7 +29,7 @@ public class StmtIf extends AbstractNode implements Stmt {
         this.elseStatement = null;
     }
 
-    public Bool getCondition() {
+    public Expr getCondition() {
         return condition;
     }
 

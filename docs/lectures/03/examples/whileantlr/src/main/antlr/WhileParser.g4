@@ -37,23 +37,29 @@ skipStmt : SKIPP
 writeStmt: WRITE expr
          ;
 
-expr     : NUM
-         | varRef
-         | READ
+expr     : atom
          | uop=MINUS expr
          | uop=BNOT expr
          | expr bop=(DIV|MUL|MOD) expr
          | expr bop=(BSHL|BSHR|BAND|BOR|BXOR) expr
          | expr bop=(PLUS|MINUS) expr
+         ;
+
+atom     : NUM
+         | READ
          | LPARENT expr RPARENT
+         | varRef
          ;
 
 varRef   : ID
          ;
 
-bool     : val=(TRUE|FALSE)
+bool     : boolAtom
          | NOT bool
          | expr bop=(EQ|NEQ|LESS|GT|LEQ|GTE) expr
          | bool bop=(AND|OR|XOR) bool
+         ;
+
+boolAtom : val=(TRUE|FALSE)
          | LPARENT bool RPARENT
          ;

@@ -34,7 +34,7 @@ public class Main {
             System.out.print(treeText);
 
             TreeVisualizer visualizer = new TreeVisualizer(parser.getRuleNames());
-            Path dotFile = Paths.get("ast.dot");
+            Path dotFile = Paths.get("tree.dot");
             visualizer.printDot(root, dotFile);
             Dot.renderSvg(dotFile);
         }
@@ -44,7 +44,7 @@ public class Main {
         System.out.println(new AstDumper().printTree(astRoot));
 
         AstVisualizer visualizer = new AstVisualizer();
-        Path dotFile = Paths.get("ast2.dot");
+        Path dotFile = Paths.get("ast.dot");
         visualizer.printDot(astRoot, dotFile);
         Dot.renderSvg(dotFile);
     }
