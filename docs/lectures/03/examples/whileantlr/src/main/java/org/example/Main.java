@@ -28,21 +28,22 @@ public class Main {
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             WhileParser parser = new WhileParser(tokens);
             root = parser.compilationUnit();
-
+            // Prints the parse tree to the output.
             TreeDumper dumper = new TreeDumper(parser.getRuleNames());
             String treeText = dumper.printTree(root);
             System.out.print(treeText);
-
+            // Renders the parse tree to an image.
             TreeVisualizer visualizer = new TreeVisualizer(parser.getRuleNames());
             Path dotFile = Paths.get("tree.dot");
             visualizer.printDot(root, dotFile);
             Dot.renderSvg(dotFile);
         }
-
+        // Prints the AST to the output.
         Node astRoot = root.accept(new AstBuilder());
-        System.out.println("------------------------");
-        System.out.println(new AstDumper().printTree(astRoot));
-
+        AstDumper dumper = new AstDumper();
+        String astText = dumper.printTree(astRoot);
+        System.out.println(astText);
+        // Renders the AST to an image.
         AstVisualizer visualizer = new AstVisualizer();
         Path dotFile = Paths.get("ast.dot");
         visualizer.printDot(astRoot, dotFile);

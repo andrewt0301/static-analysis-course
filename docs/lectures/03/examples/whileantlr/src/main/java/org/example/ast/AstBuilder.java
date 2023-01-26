@@ -149,15 +149,16 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
         return new Position(
                 token.getStartIndex(),
                 token.getLine(),
-                token.getCharPositionInLine()
+                token.getCharPositionInLine() + 1
             );
     }
 
     private static Position newEndPosition(Token token) {
         int length = token.getStopIndex() - token.getStartIndex();
         return new Position(
-                token.getStartIndex(), token.getLine(),
-                token.getCharPositionInLine() + length
+                token.getStartIndex(),
+                token.getLine(),
+                token.getCharPositionInLine() + length + 2
             );
     }
 }
