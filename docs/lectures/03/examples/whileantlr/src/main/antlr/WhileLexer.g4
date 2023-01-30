@@ -45,6 +45,8 @@ DO        : 'do';
 WRITE     : 'write';
 READ      : 'read';
 SKIPP     : 'skip';
+FUN       : 'fun';
+RETURN    : 'return';
 
 NUM       : [0-9]+;
 ID        : [a-zA-Z][a-zA-Z0-9_]*;
