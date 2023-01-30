@@ -8,7 +8,7 @@ compilationUnit : fun*
 fun      : FUN ID args blockStmt
          ;
 
-args     : LPARENT (argDecl (COMMA argDecl)*)? RPARENT
+args     : (LPARENT (argDecl (COMMA argDecl)*)? RPARENT)?
          ;
 
 argDecl  : ID
