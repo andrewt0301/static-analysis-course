@@ -4,15 +4,15 @@ import java.util.List;
 import java.util.Objects;
 
 public class CompilationUnit extends AbstractNode {
-    private final List<Stmt> statements;
+    private final List<Fun> functions;
 
-    public CompilationUnit(Range range, List<Stmt> statements) {
-        super(range, statements);
-        this.statements = Objects.requireNonNull(statements);
+    public CompilationUnit(Range range, List<Fun> functions) {
+        super(range, functions);
+        this.functions = Objects.requireNonNull(functions);
     }
 
-    public List<Stmt> getStatements() {
-        return statements;
+    public List<Fun> getFunctions() {
+        return functions;
     }
 
     @Override

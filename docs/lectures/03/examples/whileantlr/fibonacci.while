@@ -1,3 +1,4 @@
+fun main()
 begin
   var a;
   var b;

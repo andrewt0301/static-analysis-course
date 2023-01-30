@@ -2,7 +2,16 @@ parser grammar WhileParser;
 
 options { tokenVocab=WhileLexer; }
 
-compilationUnit : blockStmt
+compilationUnit : fun*
+         ;
+
+fun      : FUN ID args blockStmt
+         ;
+
+args     : LPARENT (argDecl (COMMA argDecl)*)? RPARENT
+         ;
+
+argDecl  : ID
          ;
 
 stmt     : blockStmt
@@ -11,6 +20,7 @@ stmt     : blockStmt
          | writeStmt
          | ifStmt
          | whileStmt
+         | retStmt
          ;
 
 varDecl  : VAR ID (ASSIGN expr)?
@@ -35,6 +45,9 @@ skipStmt : SKIPP
          ;
 
 writeStmt: WRITE expr
+         ;
+
+retStmt  : RETURN expr?
          ;
 
 expr     : atom

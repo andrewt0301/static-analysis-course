@@ -5,16 +5,37 @@ import org.antlr.v4.runtime.Token;
 import org.example.WhileParser;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
     @Override
     public Node visitCompilationUnit(org.example.WhileParser.CompilationUnitContext ctx) {
         return new CompilationUnit(
                 newRange(ctx),
-                Collections.singletonList((Stmt) visitBlockStmt(ctx.blockStmt()))
+                ctx.fun()
+                    .stream()
+                    .map(f -> (Fun) Objects.requireNonNull(visitFun(f)))
+                    .collect(Collectors.toList())
+            );
+    }
+
+    @Override
+    public Node visitFun(WhileParser.FunContext ctx) {
+        return new Fun(
+            newRange(ctx),
+            ctx.ID().getText(),
+            (Args) visitArgs(ctx.args()),
+            (StmtBlock) visitBlockStmt(ctx.blockStmt())
+        );
+    }
+
+    @Override
+    public Node visitArgs(WhileParser.ArgsContext ctx) {
+        return new Args(
+            newRange(ctx),
+            ctx.argDecl().stream().map(a -> new ArgDecl(newRange(a), a.ID().getText())).collect(Collectors.toList())
             );
     }
 
@@ -69,6 +90,14 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
     public Node visitWhileStmt(org.example.WhileParser.WhileStmtContext ctx) {
         Range range = newRange(ctx);
         return new StmtWhile(range, (Expr) visitBool(ctx.bool()), (Stmt) visitStmt(ctx.stmt()));
+    }
+
+    @Override
+    public Node visitRetStmt(org.example.WhileParser.RetStmtContext ctx) {
+        Range range = newRange(ctx);
+        return ctx.expr() == null
+            ? new StmtReturn(range)
+            : new StmtReturn(range, (Expr) visitExpr(ctx.expr()));
     }
 
     @Override
@@ -131,7 +160,7 @@ public class AstBuilder extends org.example.WhileParserBaseVisitor<Node> {
     }
 
     @Override
-    public Node visitBoolAtom(WhileParser.BoolAtomContext ctx) {
+    public Node visitBoolAtom(org.example.WhileParser.BoolAtomContext ctx) {
         if (ctx.val != null) {
             return new BoolValue(newRange(ctx), Boolean.parseBoolean(ctx.val.getText()));
         }
