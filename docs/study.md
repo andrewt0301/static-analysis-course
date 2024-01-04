@@ -109,7 +109,20 @@ to build the required competencies and skills.
   https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
   4th edition. 2022. 
 
-## Compilers
+## System Programming
+
+- __(!)__ Randal Bryant and David O’Hallaron.
+  Computer Systems: A Programmer’s Perspective.
+  3rd edition. 2015.
+- Remzi Arpaci-Dusseau and Andrea Arpaci-Dusseau.  
+  Operating Systems: Three Easy Pieces.
+  2018.
+- Michael Kerrisk.
+  [The Linux Programming Interface: A Linux and UNIX System Programming Handbook](
+  https://man7.org/tlpi/).
+  1st Edition. 2010.
+
+## Compilers	
 
 - __(!)__ Alfred Aho, Jeffrey Ullman, Ravi Sethi, and Monica Lam.
   [Compilers: Principles, Techniques, and Tools](
@@ -118,6 +131,10 @@ to build the required competencies and skills.
 - __(*)__ Steven Muchnick.
   Advanced Compiler Design and Implementation.
   1st edition. 1997.
+- Robert Nystrom.
+  [Crafting Interpreters](
+  https://craftinginterpreters.com).
+  2021.
 
 ## Static Analysis
 
@@ -151,15 +168,9 @@ to build the required competencies and skills.
   [Program Analysis.](https://software-lab.org/teaching/winter2021/pa/)
   University of Stuttgart. 2021.
 
-## Compiler Books
-
 - [HANKIN] Chris Hankin, Flemming Nielson, and Hanne Riis Nielson
   [Principles of Program Analysis.](
   https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson/dp/3540654100) 1999.
-
-- [INTERP] Robert Nystrom.
-  [Crafting Interpreters.](
-  https://www.amazon.com/Crafting-Interpreters-Robert-Nystrom/dp/0990582930) 2021. 
 
 ## LLVM and Clang
 
