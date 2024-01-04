@@ -95,6 +95,12 @@ to build the required competencies and skills.
 - __(!)__ Martin Fowler.
   Refactoring: Improving the Design of Existing Code.
   2nd edition. 2018. 
+- __(!)__ Steve McConnell.
+  Code Complete: A Practical Handbook of Software Construction.
+  2nd Edition. 2004.
+- __(!)__ Titus Winters, Tom Manshreck, Hyrum Wright.
+  Software Engineering at Google: Lessons Learned from Programming Over Time.
+  2020.
 
 ## Static Analysis
 
