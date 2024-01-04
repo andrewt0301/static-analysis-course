@@ -35,13 +35,20 @@ to build the required competencies and skills.
 
 - Bjarne Stroustrup and Herb Sutter.
   [C++ Core Guidelines](
-  https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+  https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines).
 - [LLVM Coding Standards](
-  https://llvm.org/docs/CodingStandards.html)
+  https://llvm.org/docs/CodingStandards.html).
 - [Google C++ Style Guide](
-  https://google.github.io/styleguide/cppguide.html)
+  https://google.github.io/styleguide/cppguide.html).
 
 ## Java
+
+- __(!)__ Cay Horstmann.
+  Core Java: Fundamentals. Volume 1. 12th edition. 2021.
+- __(!)__ Cay Horstmann.
+  Core Java: Advanced Features. Volume 2. 12th edition. 2022.
+- __(!)__ Joshua Bloch. Effective Java. 3rd edition. 2018.
+- Brian Goetz. Java Concurrency in Practice. 1st edition. 2006.
 
 ## Static Analysis
 
