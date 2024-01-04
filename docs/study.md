@@ -11,8 +11,19 @@ to build the required competencies and skills.
 
 - __(*)__ [K&R] Brian Kernighan and Dennis Ritchie.
   [C Programming Language.](
-  https://en.wikipedia.org/wiki/The_C_Programming_Language).
+  https://en.wikipedia.org/wiki/The_C_Programming_Language)
   2nd Edition. 1988.
+
+### Code Style Guides
+
+- [Bjarne Stroustrup and Herb Sutter](
+  https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+
+- [LLVM Coding Standards](
+  https://llvm.org/docs/CodingStandards.html)
+
+- [Google C++ Style Guide](
+  https://google.github.io/styleguide/cppguide.html)
 
 ## Static Analysis
 
