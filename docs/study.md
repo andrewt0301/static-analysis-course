@@ -77,6 +77,25 @@ to build the required competencies and skills.
   [JavaParser: Visited](
   https://leanpub.com/javaparservisited).
 
+## Software Engineering
+
+- __(!)__ Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+  [Design Patterns: Elements of Reusable Object-Oriented Software](
+  https://en.wikipedia.org/wiki/Design_Patterns).
+  1994.
+- __(!)__ Robert Martin.
+  Clean Code: A Handbook of Agile Software Craftsmanship.
+  2008.
+- __(!)__ Robert Martin.
+  Clean Architecture: A Craftsman's Guide to Software Structure and Design.
+  2017.
+- Robert Martin.
+  Agile Software Development, Principles, Patterns, and Practices.
+  2002.
+- __(!)__ Martin Fowler.
+  Refactoring: Improving the Design of Existing Code.
+  2nd edition. 2018. 
+
 ## Static Analysis
 
 - [SPA] Anders Møller and Michael I. Schwartzbach.
