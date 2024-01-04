@@ -4,10 +4,17 @@ Here is the list of textbooks and courses that contain materials
 to be studied to by a software engineer who works on static analysis project
 to build the required competencies and skills.
 
-* `[!]` - _basic must-read book_
-* `[*]` - _advanced book_
+* `(!)` - _basic must-read_
+* `(*)` - _advanced_
 
-## Courses
+## C/C++
+
+- __(*)__ [K&R] Brian Kernighan and Dennis Ritchie.
+  [C Programming Language.](
+  https://en.wikipedia.org/wiki/The_C_Programming_Language).
+  2nd Edition. 1988.
+
+## Static Analysis
 
 - [SPA] Anders Møller and Michael I. Schwartzbach.
   [Static Program Analysis.](
