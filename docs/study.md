@@ -59,7 +59,7 @@ to build the required competencies and skills.
   https://docs.oracle.com/javase/specs/index.html).
 - __(!)__ JSR 133: JavaTM Memory Model and Thread Specification. 
 - __(*)__ [JDK Documentation](
-  https://docs.oracle.com/en/java/javase/17/books.html)
+  https://docs.oracle.com/en/java/javase/17/books.html).
 
 ### ANTLR
 
@@ -70,6 +70,12 @@ to build the required competencies and skills.
   Language Implementation Patterns:
   Create Your Own Domain-Specific and General Programming Languages.
   1st edition. 2010.
+
+### JavaParser
+
+- Nicholas Smith.
+  [JavaParser: Visited. Analyse, transform and generate your Java code base](
+  https://leanpub.com/javaparservisited).
 
 ## Static Analysis
 
