@@ -30,6 +30,9 @@ to build the required competencies and skills.
 - Herb Sutter and Andrei Alexandrescu.
   C++ Coding Standards: 101 Rules, Guidelines and Best Practices.
   2005.
+- __(*)__ Andrei Alexandrescu.
+  [Modern C++ Design: Generic Programming and Design Patterns Applied](
+  https://en.wikipedia.org/wiki/Modern_C%2B%2B_Design). 2001.
 - __(!)__ Stephan Roth.
   Clean C++20: Sustainable Software Development Patterns and Best Practices.
   2nd edition. 2021.
