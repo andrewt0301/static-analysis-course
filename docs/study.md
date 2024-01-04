@@ -37,7 +37,7 @@ to build the required competencies and skills.
   Clean C++20: Sustainable Software Development Patterns and Best Practices.
   2nd edition. 2021.
 
-### C++ Code Style Guides
+#### C++ Code Style Guides
 
 - Bjarne Stroustrup and Herb Sutter.
   [C++ Core Guidelines](
@@ -61,7 +61,7 @@ to build the required competencies and skills.
 - __(*)__ [JDK Documentation](
   https://docs.oracle.com/en/java/javase/17/books.html).
 
-### ANTLR
+#### ANTLR
 
 - Terence Parr.
   The Definitive ANTLR 4 Reference by Terence Parr.
@@ -71,7 +71,7 @@ to build the required competencies and skills.
   Create Your Own Domain-Specific and General Programming Languages.
   1st edition. 2010.
 
-### JavaParser
+#### JavaParser
 
 - Nicholas Smith.
   [JavaParser: Visited. Analyse, transform and generate your Java code base](
