@@ -74,7 +74,7 @@ to build the required competencies and skills.
 #### JavaParser
 
 - Nicholas Smith.
-  [JavaParser: Visited. Analyse, transform and generate your Java code base](
+  [JavaParser: Visited](
   https://leanpub.com/javaparservisited).
 
 ## Static Analysis
