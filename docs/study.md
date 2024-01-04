@@ -4,6 +4,9 @@ Here is the list of textbooks and courses that contain materials
 to be studied to by a software engineer who works on static analysis project
 to build the required competencies and skills.
 
+* `[!]` - _basic must-read book_
+* `[*]` - _advanced book_
+
 ## Courses
 
 - [SPA] Anders Møller and Michael I. Schwartzbach.
