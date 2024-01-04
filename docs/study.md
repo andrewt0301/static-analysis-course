@@ -49,6 +49,9 @@ to build the required competencies and skills.
   Core Java: Advanced Features. Volume 2. 12th edition. 2022.
 - __(!)__ Joshua Bloch. Effective Java. 3rd edition. 2018.
 - Brian Goetz. Java Concurrency in Practice. 1st edition. 2006.
+- __(*)__ [Java Language and Virtual Machine Specifications](
+  https://docs.oracle.com/javase/specs/index.html).
+- __(!)__ JSR 133: JavaTM Memory Model and Thread Specification. 
 
 ## Static Analysis
 
