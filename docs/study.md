@@ -115,7 +115,6 @@ to build the required competencies and skills.
   [Compilers: Principles, Techniques, and Tools](
   https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools).
   2nd edition. 2006.
-
 - __(*)__ Steven Muchnick.
   Advanced Compiler Design and Implementation.
   1st edition. 1997.
@@ -154,21 +153,6 @@ to build the required competencies and skills.
 
 ## Compiler Books
 
-- [DRAGON] Alfred Aho, Jeffrey Ullman, Ravi Sethi, and Monica Lam.
-  [Compilers: Principles, Techniques, and Tools.](
-  https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811)
-  2nd edition. 2006.
-
-- [MUCHNIK] Steven Muchnick.
-  [Advanced Compiler Design and Implementation.](
-  https://www.amazon.com/Advanced-Compiler-Design-Implementation-Muchnick/dp/1558603204)
-  1st edition. 1997.
-
-- [PARR] Terence Parr.
-  [Language Implementation Patterns: Create Your Own Domain-Specific and General Programming Languages.](
-  https://www.amazon.com/Language-Implementation-Patterns-Domain-Specific-Programming/dp/193435645X)
-  1st Edition. 2010.
-
 - [HANKIN] Chris Hankin, Flemming Nielson, and Hanne Riis Nielson
   [Principles of Program Analysis.](
   https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson/dp/3540654100) 1999.
@@ -177,11 +161,7 @@ to build the required competencies and skills.
   [Crafting Interpreters.](
   https://www.amazon.com/Crafting-Interpreters-Robert-Nystrom/dp/0990582930) 2021. 
 
-## Tool Books
-
-- [ANTLR] Terence Parr.
-  [The Definitive ANTLR 4 Reference by Terence Parr](
-  https://pragprog.com/titles/tpantlr2/the-definitive-antlr-4-reference/) 2013.
+## LLVM and Clang
 
 - [LLVM] Bruno Cardoso Lopes and Rafael Auler.
   [Getting Started with LLVM Core Libraries](
