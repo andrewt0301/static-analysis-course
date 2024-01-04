@@ -18,14 +18,20 @@ to build the required competencies and skills.
 - Bjarne Stroustrup.
   Programming: Principles and Practice Using C++.
   2nd edition. 2014.
+- Bjarne Stroustrup.
+  The C++ Programming Language.
+  4th edition. 2013.
 - __(!)__ Scott Meyers.
   Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14.
   2014.
 - Scott Meyers.
   Effective C++, Third Edition: 55 Specific Ways to Improve Your Programs and Designs.
   2005.
+- Herb Sutter and Andrei Alexandrescu.
+  C++ Coding Standards: 101 Rules, Guidelines and Best Practices.
+  2005.
 
-### Code Style Guides
+### C++ Code Style Guides
 
 - Bjarne Stroustrup and Herb Sutter.
   [C++ Core Guidelines](
