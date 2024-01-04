@@ -9,15 +9,18 @@ to build the required competencies and skills.
 
 ## C/C++
 
-- __(*)__ Brian Kernighan and Dennis Ritchie.
+- __(!)__ Brian Kernighan and Dennis Ritchie.
   [C Programming Language.](
   https://en.wikipedia.org/wiki/The_C_Programming_Language)
-  2nd Edition. 1988.
-
-- __(*)__ Scott Meyers.
+  2nd edition. 1988.
+- __(!)__ Bjarne Stroustrup.
+  A Tour of C++. 3rd edition. 2023.
+- Bjarne Stroustrup.
+  Programming: Principles and Practice Using C++.
+  2nd edition. 2014.
+- __(!)__ Scott Meyers.
   Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14.
   2014.
-
 - Scott Meyers.
   Effective C++, Third Edition: 55 Specific Ways to Improve Your Programs and Designs.
   2005.
