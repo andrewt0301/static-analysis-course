@@ -1,7 +1,7 @@
 # Textbooks and Courses for Self-Education
 
 Here is the list of textbooks and courses that contain materials
-to be studied to by a software engineer who works on static analysis project
+to be studied by a software engineer who works on a static analysis project
 to build the required competencies and skills.
 
 * `(!)` - _basic must-read_
@@ -9,21 +9,30 @@ to build the required competencies and skills.
 
 ## C/C++
 
-- __(*)__ [K&R] Brian Kernighan and Dennis Ritchie.
+- __(*)__ Brian Kernighan and Dennis Ritchie.
   [C Programming Language.](
   https://en.wikipedia.org/wiki/The_C_Programming_Language)
   2nd Edition. 1988.
 
+- __(*)__ Scott Meyers.
+  Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14.
+  2014.
+
+- Scott Meyers.
+  Effective C++, Third Edition: 55 Specific Ways to Improve Your Programs and Designs.
+  2005.
+
 ### Code Style Guides
 
-- [Bjarne Stroustrup and Herb Sutter](
+- Bjarne Stroustrup and Herb Sutter.
+  [C++ Core Guidelines](
   https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-
 - [LLVM Coding Standards](
   https://llvm.org/docs/CodingStandards.html)
-
 - [Google C++ Style Guide](
   https://google.github.io/styleguide/cppguide.html)
+
+## Java
 
 ## Static Analysis
 
