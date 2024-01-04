@@ -109,6 +109,17 @@ to build the required competencies and skills.
   https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
   4th edition. 2022. 
 
+## Compilers
+
+- __(!)__ Alfred Aho, Jeffrey Ullman, Ravi Sethi, and Monica Lam.
+  [Compilers: Principles, Techniques, and Tools](
+  https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools).
+  2nd edition. 2006.
+
+- __(*)__ Steven Muchnick.
+  Advanced Compiler Design and Implementation.
+  1st edition. 1997.
+
 ## Static Analysis
 
 - [SPA] Anders Møller and Michael I. Schwartzbach.
