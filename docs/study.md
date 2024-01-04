@@ -61,6 +61,16 @@ to build the required competencies and skills.
 - __(*)__ [JDK Documentation](
   https://docs.oracle.com/en/java/javase/17/books.html)
 
+### ANTLR
+
+- Terence Parr.
+  The Definitive ANTLR 4 Reference by Terence Parr.
+  2013.
+- Terence Parr.
+  Language Implementation Patterns:
+  Create Your Own Domain-Specific and General Programming Languages.
+  1st edition. 2010.
+
 ## Static Analysis
 
 - [SPA] Anders Møller and Michael I. Schwartzbach.
