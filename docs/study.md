@@ -30,6 +30,9 @@ to build the required competencies and skills.
 - Herb Sutter and Andrei Alexandrescu.
   C++ Coding Standards: 101 Rules, Guidelines and Best Practices.
   2005.
+- __(!)__ Stephan Roth.
+  Clean C++20: Sustainable Software Development Patterns and Best Practices.
+  2nd edition. 2021.
 
 ### C++ Code Style Guides
 
@@ -52,6 +55,8 @@ to build the required competencies and skills.
 - __(*)__ [Java Language and Virtual Machine Specifications](
   https://docs.oracle.com/javase/specs/index.html).
 - __(!)__ JSR 133: JavaTM Memory Model and Thread Specification. 
+- __(*)__ [JDK Documentation](
+  https://docs.oracle.com/en/java/javase/17/books.html)
 
 ## Static Analysis
 
