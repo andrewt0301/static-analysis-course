@@ -102,6 +102,13 @@ to build the required competencies and skills.
   Software Engineering at Google: Lessons Learned from Programming Over Time.
   2020.
 
+## Algorithms
+
+- __(!)__ Thomas Cormen, Charles Leiserson, Ronald Rivest, and Clifford Stein.  
+  [Introduction to Algorithms](
+  https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
+  4th edition. 2022. 
+
 ## Static Analysis
 
 - [SPA] Anders Møller and Michael I. Schwartzbach.
