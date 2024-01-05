@@ -138,39 +138,32 @@ to build the required competencies and skills.
 
 ## Static Analysis
 
-- [SPA] Anders Møller and Michael I. Schwartzbach.
+- __(!)__ Anders Møller and Michael Schwartzbach.
   [Static Program Analysis.](
   https://cs.au.dk/~amoeller/spa/)
-  Aarhus University. 2021.
-
-- [CMUPA] Jonathan Aldrich, Claire Le Goues, and Rohan Padhye.
+  Aarhus University. 2023.
+- Jonathan Aldrich, Claire Le Goues, and Rohan Padhye.
   [Program Analysis.](
   https://cmu-program-analysis.github.io/2022/index.html)
   [Lecture notes.](
-  https://github.com/CMU-program-analysis/CMU-program-analysis.github.io/blob/master/2022/resources/program-analysis.pdf)
-  Carnegie Mellon University. 2022.
-
-- [FAPA] Wei Le.
+  https://github.com/CMU-program-analysis/CMU-program-analysis.github.io/blob/master/2023/resources/program-analysis.pdf)
+  Carnegie Mellon University. 2023.
+- Wei Le.
   [Foundations and Applications of Program Analysis.](
   https://github.com/wei-le/programanalysiscourse)
   Iowa State University. 2021.
-
-- [SAMSUNG] Eugene Zouev, Dmitry Botcharnikov, and Sergey Ignatov.
+- Eugene Zouev, Dmitry Botcharnikov, and Sergey Ignatov.
   [Compiler Construction: Practical Introduction.](
   https://github.com/andrewt0301/CrashCourse/tree/master/Samsung%20Compiler%20BootCamp/Slides)
   Samsung Compiler Bootcamp, Samsung Research Russia, 2019.
-
-- [NANJING] Tian Tan and Yue Li.
+- Tian Tan and Yue Li.
   [Static Program Analysis.](https://tai-e.pascal-lab.net/lectures.html) 
   Nanjing University, 2020.
-
-- [SOLA] Michael Pradel.
+- Michael Pradel.
   [Program Analysis.](https://software-lab.org/teaching/winter2021/pa/)
   University of Stuttgart. 2021.
-
-- [HANKIN] Chris Hankin, Flemming Nielson, and Hanne Riis Nielson
-  [Principles of Program Analysis.](
-  https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson/dp/3540654100) 1999.
+- __(*)__ Chris Hankin, Flemming Nielson, and Hanne Riis Nielson
+  Principles of Program Analysis. 1999.
 
 ## LLVM and Clang
 
