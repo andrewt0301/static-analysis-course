@@ -1,4 +1,4 @@
-# Textbooks and Courses for Self-Education
+# Materials for Self-Education
 
 Here is the list of textbooks and courses that contain materials
 to be studied by a software engineer who works on a static analysis project
