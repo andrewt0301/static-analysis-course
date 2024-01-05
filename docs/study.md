@@ -1,7 +1,7 @@
 # Materials for Self-Education
 
 Here is the list of textbooks and courses that contain materials
-to be studied by a software engineer who works on a static analysis project
+to be studied by a software engineer who works on a static-analysis project
 to build the required competencies and skills.
 
 * `(!)` - _basic must-read_
