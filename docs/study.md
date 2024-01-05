@@ -170,6 +170,16 @@ to build the required competencies and skills.
 
 ## LLVM and Clang
 
-- [LLVM] Bruno Cardoso Lopes and Rafael Auler.
-  [Getting Started with LLVM Core Libraries](
-  https://www.amazon.com/Getting-Started-LLVM-Core-Libraries/dp/1782166920) 2014.
+- Bruno Cardoso Lopes and Rafael Auler.
+  Getting Started with LLVM Core Libraries. 2014.
+- Michael D. Adams.
+  [Lecture Slides for the Clang Libraries](
+  https://www.ece.uvic.ca/~frodo/cppbook/downloads/lecture_slides_for_the_clang_libraries-0.0.pdf).
+  2022.
+- Artem Degrachev.
+  [Clang Static Analyzer: A Checker Developer's Guide](
+  https://github.com/haoNoQ/clang-analyzer-guide/releases/download/v0.1/clang-analyzer-guide-v0.1.pdf).
+  2016.
+
+
+
