@@ -114,7 +114,7 @@ to build the required competencies and skills.
 - __(!)__ Randal Bryant and David O’Hallaron.
   Computer Systems: A Programmer’s Perspective.
   3rd edition. 2015.
-- Remzi Arpaci-Dusseau and Andrea Arpaci-Dusseau.  
+- Remzi Arpaci-Dusseau and Andrea Arpaci-Dusseau.
   Operating Systems: Three Easy Pieces.
   2018.
 - Michael Kerrisk.
@@ -151,7 +151,7 @@ to build the required competencies and skills.
 - Wei Le.
   [Foundations and Applications of Program Analysis.](
   https://github.com/wei-le/programanalysiscourse)
-  Iowa State University. 2021.
+  Iowa State University. 2023.
 - Eugene Zouev, Dmitry Botcharnikov, and Sergey Ignatov.
   [Compiler Construction: Practical Introduction.](
   https://github.com/andrewt0301/CrashCourse/tree/master/Samsung%20Compiler%20BootCamp/Slides)
