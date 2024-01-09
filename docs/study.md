@@ -19,7 +19,8 @@ to build the required competencies and skills.
   Programming: Principles and Practice Using C++.
   2nd edition. 2014.
 - Bjarne Stroustrup.
-  The C++ Programming Language.
+  [The C++ Programming Language](
+  https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language).
   4th edition. 2013.
 - __(!)__ Scott Meyers.
   Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14.
