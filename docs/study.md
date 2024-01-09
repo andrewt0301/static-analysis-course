@@ -104,7 +104,8 @@ to build the required competencies and skills.
   Domain-Specific Languages.
   1st edition. 2010.
 - __(!)__ Steve McConnell.
-  Code Complete: A Practical Handbook of Software Construction.
+  [Code Complete: A Practical Handbook of Software Construction](
+  https://en.wikipedia.org/wiki/Code_Complete).
   2nd Edition. 2004.
 - __(!)__ Titus Winters, Tom Manshreck, Hyrum Wright.
   Software Engineering at Google: Lessons Learned from Programming Over Time.
