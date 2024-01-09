@@ -104,6 +104,9 @@ to build the required competencies and skills.
 - __(!)__ Titus Winters, Tom Manshreck, Hyrum Wright.
   Software Engineering at Google: Lessons Learned from Programming Over Time.
   2020.
+- __(!)__ Kent Beck.
+  Extreme Programming Explained: Embrace Change.
+  2nd edition. 2004.   
 
 ## Algorithms
 
