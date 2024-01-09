@@ -67,11 +67,13 @@ to build the required competencies and skills.
 #### ANTLR
 
 - Terence Parr.
-  The Definitive ANTLR 4 Reference by Terence Parr.
+  [The Definitive ANTLR 4 Reference](
+  https://pragprog.com/titles/tpantlr2/the-definitive-antlr-4-reference/).
   2013.
 - Terence Parr.
-  Language Implementation Patterns:
-  Create Your Own Domain-Specific and General Programming Languages.
+  [Language Implementation Patterns:
+  Create Your Own Domain-Specific and General Programming Languages](
+  https://pragprog.com/titles/tpdsl/language-implementation-patterns/).
   1st edition. 2010.
 
 #### JavaParser
