@@ -51,9 +51,11 @@ to build the required competencies and skills.
 ## Java
 
 - __(!)__ Cay Horstmann.
-  Core Java: Fundamentals. Volume 1. 12th edition. 2021.
+  [Core Java](https://horstmann.com/corejava/index.html):
+  Fundamentals. Volume 1. 12th edition. 2021.
 - __(!)__ Cay Horstmann.
-  Core Java: Advanced Features. Volume 2. 12th edition. 2022.
+  [Core Java](https://horstmann.com/corejava/index.html):
+  Advanced Features. Volume 2. 12th edition. 2022.
 - __(!)__ Joshua Bloch. Effective Java. 3rd edition. 2018.
 - Brian Goetz. Java Concurrency in Practice. 1st edition. 2006.
 - __(*)__ [Java Language and Virtual Machine Specifications](
