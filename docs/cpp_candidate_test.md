@@ -34,7 +34,7 @@ Cases of pointer initialization include:
 1. Create a fork of the [LLVM](https://github.com/llvm/llvm-project) project at GitHub.
 2. Clone and build the project (flag `-DLLVM_ENABLE_PROJECTS='clang;clang-tools-extra'` is needed to build Clang-Tidy).
 3. Add a new checker to module `<llvm-project>/tree/main/clang-tools-extra/clang-tidy/misc`.
-4. Add a test for the checker into folder `<llvm-project>/clang-tools-extra/test/clang-tidy/checkers/misc`. 
+4. Add tests for the checker into folder `<llvm-project>/clang-tools-extra/test/clang-tidy/checkers/misc`.
 
 ## Code Quality Requirements
 
