@@ -17,8 +17,9 @@ Provide an example that demonstrates how the checker works and an example of Cla
 
 ## Vulnerability
 
-__CWE-587__ means that assigning a constant address other than `NULL` or `0` to a pointer is considered a bad practice.
-Using a fixed address is not portable, because that address will probably not be valid in all environments or platforms.
+[CWE-587](https://cwe.mitre.org/data/definitions/587.html) means that assigning
+a constant address other than `NULL` or `0` to a pointer is considered a bad practice.
+Using a fixed address is not portable, because that address may not be valid in all environments or platforms.
 
 Cases of pointer initialization include:
 
