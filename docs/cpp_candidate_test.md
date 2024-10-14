@@ -4,14 +4,13 @@ Test For Candidates (C++)
 Our team works on a static-analysis engine based on [Clang Static Analyzer](https://clang-analyzer.llvm.org/).
 One of the key requirements for a developer is to be familiar with the Clang infrastructure. 
 The goal of this task is to evaluate skills in implementing checkers based on
-queries to the [Clang AST](https://clang.llvm.org/docs/IntroductionToTheClangAST.html).
-[Clang AST Matchers](https://clang.llvm.org/docs/LibASTMatchersReference.html)
-are widely used to implement various checkers for Clang Static Analyzer.
+queries to the [Clang AST](https://clang.llvm.org/docs/IntroductionToTheClangAST.html). The AST is typically examined with the help of [Clang AST Matchers](https://clang.llvm.org/docs/LibASTMatchersReference.html),
+which are widely used to implement various checkers.
 
 # Task
 
 You are requested to implement a simple checker for [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/).
-It is a tool that runs AST-based checks for C/C++ programs.
+It is a Clang-based tool that runs AST-based checks for C/C++ programs.
 The checker must detect vulnerability [CWE-587](https://cwe.mitre.org/data/definitions/587.html) in C/C++ code.
 Provide a brief description of the classes/modules you have added.
 Provide an example that demonstrates how the checker works and an example of Clang-Tidy output.
