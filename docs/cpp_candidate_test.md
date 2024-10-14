@@ -2,10 +2,9 @@ Test For Candidates (C++)
 ---
 
 Our team works on a static-analysis engine based on [Clang Static Analyzer](https://clang-analyzer.llvm.org/).
-One of the key requirements for a developer is to be familiar with the Clang infrastructure. 
-The goal of this task is to evaluate skills in implementing checkers based on
-queries to the [Clang AST](https://clang.llvm.org/docs/IntroductionToTheClangAST.html). The AST is typically examined with the help of [Clang AST Matchers](https://clang.llvm.org/docs/LibASTMatchersReference.html),
-which are widely used to implement various checkers.
+One of the key requirements for a developer is to be familiar with the [Clang](https://clang.llvm.org/) infrastructure. 
+The goal of this task is to evaluate skills in implementing checkers based on queries to the [Clang AST](https://clang.llvm.org/docs/IntroductionToTheClangAST.html).
+The AST is typically examined with the help of [Clang AST Matchers](https://clang.llvm.org/docs/LibASTMatchersReference.html), which are widely used to implement various checkers.
 
 # Task
 
