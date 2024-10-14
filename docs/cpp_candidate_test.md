@@ -52,7 +52,7 @@ Cases of pointer initialization include:
 * A checker template and all related files can be generated with a Python script (see the references). 
 * A custom AST matcher may help simplify your code (see the reference and examples of existing matchers).
 * The `EvaluateAsInt` method of the [Expr](https://clang.llvm.org/doxygen/classclang_1_1Expr.html)
-  class can help to know the expression value (it is constant).
+  class can help to know the expression value (if it is constant).
 * It can be useful to execute Clang matchers in `clang-query` before starting coding.  
 * Build Clang (it takes time!) with this command (Linux), specify your installation folder:
   ```
@@ -96,3 +96,6 @@ Run Clang-Tidy tests:
   https://devblogs.microsoft.com/cppblog/exploring-clang-tooling-part-3-rewriting-code-with-clang-tidy/).
 * Artem Dergachev. [Clang Static Analyzer - A Checker Developer's Guide](
   https://github.com/haoNoQ/clang-analyzer-guide/releases/download/v0.1/clang-analyzer-guide-v0.1.pdf).
+* Ivan Murashko. Clang Compiler Frontend: Get to grips with the internals of a C/C++ compiler frontend
+  and create your own tools. 2024.
+
