@@ -86,6 +86,7 @@ Run Clang-Tidy tests:
 
 * [Clang AST Matcher Reference](https://clang.llvm.org/docs/LibASTMatchersReference.html).
 * [Clang AST Matcher Tutorial](https://clang.llvm.org/docs/LibASTMatchersTutorial.html).
+* [Creating and Testing Clang-Tidy Checks](https://clang.llvm.org/extra/clang-tidy/Contributing.html#testing-checks).
 * Michael Adams. [Lecture Slides for the Clang Libraries (LLVM/Clang 15)](
   https://ece.engr.uvic.ca/~frodo/cppbook/downloads/lecture_slides_for_the_clang_libraries-0.0.pdf).
 * Stephen Kelly. Exploring Clang Tooling, Part 1: [Extending Clang-Tidy](
@@ -98,4 +99,3 @@ Run Clang-Tidy tests:
   https://github.com/haoNoQ/clang-analyzer-guide/releases/download/v0.1/clang-analyzer-guide-v0.1.pdf).
 * Ivan Murashko. Clang Compiler Frontend: Get to grips with the internals of a C/C++ compiler frontend
   and create your own tools. 2024.
-
