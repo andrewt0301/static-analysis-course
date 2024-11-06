@@ -7,11 +7,13 @@ such as symbolic execution and abstract interpretation.
 
 #### 1. Pavel Mezhuev et al. [A dynamic algorithm for source code static analysis](https://ieeexplore.ieee.org/document/9693752). 2021.
 
-The paper proposes an approach to static code analysis that helps achieve high performance.
+The paper proposes an approach to static code analysis that
+enables cross-translation-unit (CTU) analysis and helps achieve high performance.
 Main ideas of the approach are:
-(1) minimize the footprint of ASTs and CFGs in memory and free them (or their parts) as soon as possible;
+(1) minimize the footprint of TU data structures (AST/CFG/etc.) in memory and free their parts as soon as possible;
 (2) use function summaries;
 (3) run analysis tasks in parallel.
 The proposed analysis algorithm includes the following steps:
 1. TUs are pre-parsed to build a map of functions (key is a function, value is the translation unit where it is defined).
-2. TUs are placed into a priority queue.
+2. TUs are placed into a priority queue, from which they are picked and processed by a thread pool.
+
