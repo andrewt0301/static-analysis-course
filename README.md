@@ -3,8 +3,7 @@ Introduction to Static Analysis Course Materials
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 ----------------------------------------------------------------------------------------------------
 
-This is a hosting for materials for the “Principles of Static Program Analysis” course
-taught at [Faculty of Computer Science of Higher School of Economics](https://cs.hse.ru/en/).
+This is a hosting for materials for the “Principles of Static Program Analysis” course.
 
 The course website is [here](https://andrewt0301.github.io/static-analysis-course/).
 
