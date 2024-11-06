@@ -10,7 +10,7 @@ such as symbolic execution and abstract interpretation.
 The paper proposes an approach to static code analysis that
 enables cross-translation-unit (CTU) analysis and helps achieve high performance.
 Main ideas of the approach are:
-(1) minimize the footprint of TU data structures (AST/CFG/etc.) in memory and free their parts as soon as possible;
+(1) minimize the footprint of TU data structures (AST/CFG/etc.) in memory and free them (or their parts) as soon as possible;
 (2) use function summaries;
 (3) run analysis tasks in parallel.
 The proposed analysis algorithm includes the following steps:
