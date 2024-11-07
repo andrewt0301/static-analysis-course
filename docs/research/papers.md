@@ -5,6 +5,11 @@ This page contains review notes on research papers dedicated to static code anal
 The main focus is static code analysis tools for C/C++ based on Clang and methods of static code analysis
 such as symbolic execution and abstract interpretation.
 
+1. Pavel Mezhuev et al. [A dynamic algorithm for source code static analysis](
+   #1-pavel-mezhuev-et-al-a-dynamic-algorithm-for-source-code-static-analysis-2021). 2021.
+
+---
+
 ##### 1. Pavel Mezhuev et al. [A dynamic algorithm for source code static analysis](https://ieeexplore.ieee.org/document/9693752). 2021.
 
 The paper proposes an approach to static code analysis that
