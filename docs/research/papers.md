@@ -17,7 +17,8 @@ enables cross-translation-unit (CTU) analysis and helps achieve high performance
 Main ideas of the approach are:
 (1) minimize the memory footprint of TU data structures (AST/CFG/etc.) and free them (or their parts) as soon as possible;
 (2) use function summaries;
-(3) run analysis tasks in parallel.
+(3) use symbolic execution to evaluate reachability of situations detected by data-flow analysis;
+(4) run analysis tasks in parallel.
 The proposed analysis algorithm includes the following steps:
 
 1. TUs are pre-parsed to build a map of functions (key is a function, value is the translation unit where it is defined).
@@ -48,4 +49,4 @@ The types of tasks performed in parallel are listed in the order of increasing p
 
 The approach has been evaluated on several open-source projects. The algorithm has found popular C/C++ issues
 (division by zero, null pointer dereference, uninitialized memory used, use after free).
-Analysis reaches a high performance. However, FP/FN rate is not assessed.
+Analysis reaches a high performance. However, an assessment of FP/FN rate is not provided.
