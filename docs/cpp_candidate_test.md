@@ -26,8 +26,9 @@ Cases of pointer initialization include:
 2. Variable/field assignment.
 3. Field initialization (in constructor initializer).
 4. Passing a value to function/method/constructor/operator.
-5. Initializing an array of pointers (bad value in initialization list).
-6. Any other ideas?
+5. Returning a value from a function/method/operator.
+6. Initializing an array of pointers (bad value in initialization list).
+7. Any other ideas?
 
 ## Implementation
 
