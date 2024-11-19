@@ -189,6 +189,7 @@ to build the required competencies and skills.
   [Clang Static Analyzer: A Checker Developer's Guide](
   https://github.com/haoNoQ/clang-analyzer-guide/releases/download/v0.1/clang-analyzer-guide-v0.1.pdf).
   2016.
-
-
-
+- Ivan Murashko. Clang Compiler Frontend: Get to grips with the internals of a C/C++ compiler frontend
+  and create your own tools. 2024.
+- Kai Nacke and Amy Kwan. Learn LLVM 17: A beginner's guide to learning LLVM compiler tools and core libraries with C++.
+  Second Edition. 2024.
