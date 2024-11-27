@@ -1,7 +1,7 @@
 C++ Developer Job Description
 ---
 
-Our team is working on tools for finding bugs and vulnerabilities in software.
+Our team is working on tools for finding bugs and vulnerabilities in source code.
 Our current focus is a static program analysis engine for C/C++,
 which provides a domain-specific language (DSL) for creating analysis rules.
 This will give developers the possibility of creating checks relevant for their projects.
