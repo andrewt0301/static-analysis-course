@@ -20,7 +20,7 @@ We are looking for new team members!
 
 ## Job Requirements
 
-* Bachelor or above in Computer Science or related fields, PhD is a great plus
+* Bachelor or above in Computer Science or a related field, PhD is a great plus
 * Good written English (at least Intermediate level is required)
 * Strong knowledge of C++
 * Solid algorithmic skills
@@ -35,6 +35,6 @@ We are looking for new team members!
 
 ## Test For Candidates
 
-Here is the [test for candidates](cpp_candidate_test.md).
-We use it to evaluate skills in creating code checkers.
-And it gives candidates some hint on our direction!
+Here is the [test](cpp_candidate_test.md) for candidates.
+We use it to evaluate your skills in creating code checkers.
+And it will give you a hint on what we are doing!
