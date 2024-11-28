@@ -25,7 +25,7 @@ which provides a domain-specific language (DSL) for creating analysis rules.
 * ICPC participation is a plus
 * Knowledge of software design principles (design patterns, SOLID)
 * Understanding of principles of compiler design and static program analysis
-* DevOps skills (Bash and Docker)
+* DevOps skills (CMake/Make/Ninja, Bash, Docker)
 * Knowledge of LLVM/Clang infrastructure is a plus
 * Skills in POSIX and WinAPI programming are a plus
 * Experience with other languages like Java and Python is a plus
