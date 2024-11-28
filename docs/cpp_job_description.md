@@ -34,5 +34,5 @@ which provides a domain-specific language (DSL) for creating analysis rules.
 ## Test For Candidates
 
 Here is the [test](cpp_candidate_test.md) for candidates.
-We use it to evaluate your skills in creating code checkers.
-And it will give you a hint on what we are doing.
+We use it to evaluate your skills in creating code checkers
+and it will give you a hint on what we are doing.
