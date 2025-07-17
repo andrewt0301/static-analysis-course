@@ -191,5 +191,6 @@ to build the required competencies and skills.
   2016.
 - Ivan Murashko. Clang Compiler Frontend: Get to grips with the internals of a C/C++ compiler frontend
   and create your own tools. 2024.
+- Min-Yih "Min" Hsu. LLVM Techniques, Tips, and Best Practices Clang and Middle-End Libraries. 2021.
 - Kai Nacke and Amy Kwan. Learn LLVM 17: A beginner's guide to learning LLVM compiler tools and core libraries with C++.
   Second Edition. 2024.
